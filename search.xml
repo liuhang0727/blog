@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Loam_livox</title>
+    <url>/2020/03/02/Loam-livox/</url>
+    <content><![CDATA[<blockquote>
+<p>A fast robust high-precision LiDAR odometry and mapping package for LiDARs of small FoV  </p>
+</blockquote>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>相比于传统的机械旋转式Lidar, mems振镜固态式Lidar价格相对低廉, 为Lidar的大规模拓展应用提供更多可能性，成为一大风口.  </p>
+<p>固态Lidar特点：<br>1 Small FoV：小视角特征较少易出现退化现象，且易受到动态物体的影响<br>2 Irregular scanning pattern：不规则扫描不利于特征提取, 无法直观有效地获取点间的近邻关系<br>3 Non-repetitive scanning：即使Lidar处于静止状态, 相邻两帧点云也是不同的<br>4 Motion blur：同旋转式Lidar, 连续扫描使得帧内数据获取时间不严格一致  </p>
+<p><img src="../../../../../files/PaperReading/Loam_livox/p4.png" alt="扫描方式" title="扫描方式">  </p>
+<p>本文在LOAM的基础上进行拓展，研究内容包括特征提取, 运动补偿, 误关联剔除, 动态物体剔除  </p>
+<a id="more"></a>  
+
+<h2 id="2-Methods"><a href="#2-Methods" class="headerlink" title="2 Methods"></a>2 Methods</h2><h3 id="2-1-Points-selection-and-feature-extraction"><a href="#2-1-Points-selection-and-feature-extraction" class="headerlink" title="2.1 Points selection and feature extraction"></a>2.1 Points selection and feature extraction</h3><p>在进行特征提取前, 先筛选剔除以下几类点：视场边缘的点, 反射强度过大或过小的点, 与局部平面夹角近似0°或180°的点 (这里的局部平面怎么得到的呢?), 被遮挡的点 (怎么优雅地遍历呢?).  </p>
+<p>特征提取的方法延用LOAM (不规则的扫描方式, 怎么查找点间的近邻关系呢?), 同时考虑反射强度信息, 与近邻点的强度值差别较大的点亦定义为角点.  </p>
+<p><img src="../../../../../files/PaperReading/Loam_livox/p6.png" alt="特征提取与数据关联" title="特征提取与数据关联">  </p>
+<h3 id="2-2-Iterative-pose-optimization"><a href="#2-2-Iterative-pose-optimization" class="headerlink" title="2.2 Iterative pose optimization"></a>2.2 Iterative pose optimization</h3><p>延用LOAM中点到线和点到面的数据关联方式. 论文中使用的edge-to-edge和plane-to-plane的说法是不严谨的.  </p>
+<p>运动补偿的方法包括piecewise processing和linear interpolation两种. 其中piecewise processing是指将一帧点云按照扫描顺序分为三个sub-frames, 分别独立地对三个sub-frames进行帧与地图的匹配, sub-frames的匹配在并行的三个线程中独立处理 (值得借鉴), 并且试验中证明这种运动补偿的方式更优.  </p>
+<p>误匹配和动态物体的剔除在优化求解中统一处理. 迭代优化求解时，在迭代两遍后，然后剔除误差较大的20%的关联，然后再接着迭代优化 (机智啊!).  </p>
+<h2 id="3-Results"><a href="#3-Results" class="headerlink" title="3 Results"></a>3 Results</h2><p>建的图好看就完事了~<br><img src="../../../../../files/PaperReading/Loam_livox/p1.png" alt="SLAM_1" title="SLAM_1">  </p>
+<p><img src="../../../../../files/PaperReading/Loam_livox/p2.png" alt="SLAM_2" title="SLAM_2">  </p>
+<p><img src="../../../../../files/PaperReading/Loam_livox/p8.png" alt="SLAM_3" title="SLAM_8">  </p>
+<h2 id="4-Ponder"><a href="#4-Ponder" class="headerlink" title="4 Ponder"></a>4 Ponder</h2><p>1 特征提取模块的代码实现细节?<br>2 Piecewise processing中三个独立的子线程如何实现?<br>3 误匹配和动态物体的剔除技巧值得借鉴呀!  </p>
+<h2 id="5-More"><a href="#5-More" class="headerlink" title="5 More"></a>5 More</h2><p>Paper：<a href="../../../../../files/PaperReading/Loam_livox/Loam_livox_A_fast_robust_high-precision_LiDAR_odometry_and_mapping_package_for_LiDARs_of_small_FoV.pdf">链接</a><br>Code：<a href="https://github.com/hku-mars/loam_livox" target="_blank" rel="noopener">链接</a><br>Sensor：<a href="https://www.livoxtech.com/mid-40-and-mid-100" target="_blank" rel="noopener">连接</a></p>
+]]></content>
+      <categories>
+        <category>PaperReading</category>
+      </categories>
+      <tags>
+        <tag>SLAM</tag>
+        <tag>Lidar</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>深造or就业</title>
     <url>/2020/02/16/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/</url>
     <content><![CDATA[<blockquote>
-<p>在最好的时代, 做一个了不起的梦.   </p>
+<p>在最好的时代, 做一个了不起的梦.  </p>
 </blockquote>
-<a id="more"></a>
-
 <p>计划总是被变化甩上几条街的距离.   </p>
 <p>突如其来的疫情扰乱着14亿人的计划. 工厂的设备停止运转, 工人隔离在家中等待着政府的号令; 学校的教室空空如也, 学生以观看直播的方式响应着”停课不停学”的计划; 医院的病房人满为患, 医护人员和感染病人争分夺秒地与病毒抗争着. 巨大的社会机器像是一列的<a href="https://movie.douban.com/subject/3071441/" target="_blank" rel="noopener">雪国列车</a>, 灾难、恐慌、权力、等级、人性等.   </p>
+<a id="more"></a>  
+
 <p>最后一个学生时代的假期竟是如此特殊, 多次延期使其变得极其漫长. 原定于三月份的毕业答辩变得遥遥无期, 在诗情画意的樱花大道拍张毕业照定格学生时代的梦想也变为不可能, 毕业论文致谢中预言的”冬去春来, 已有朵朵早樱点缀着樱花大道, 呼唤着樱花盛开的到来, 为毕业季增添几分美好与诗意”成了一纸空话.   </p>
 <p>可以预想, 在一个匆匆的简易毕业典礼后, 就要彻底和校园说再见了. 或许是20余年的习惯, 或许是对安逸生活的依赖, 或许是未能满足的自尊心, 使得这份别离夹杂着如此多的酸楚. </p>
 <p>身边的很多同事和同学有着博士学历或选择继续攻读博士学位, 而自己却就要止步于一名小硕士, 如同低人一等的矮个子, 和他们交谈时不得不被俯视. 曾经为录用Offer薪资的沾沾自喜感已灰飞烟灭, 从此之后, 优秀等字眼可能将会越走越远, 成为一名普普通通的人.   </p>
@@ -35,14 +67,15 @@
     <content><![CDATA[<blockquote>
 <p>博客是记录成长与进步的最好工具  </p>
 </blockquote>
-<a id="more"></a>  
-
 <h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>安装git  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git-core</span><br></pre></td></tr></table></figure>
 <p>安装Node.js  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -</span><br><span class="line">$ sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
 <p>安装Hexo  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>  
+
 <p>新建工作空间  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 <p>其中_config.yml文件配置网站信息;　source存放用户资源数据;　themes存放博客主题.  </p>

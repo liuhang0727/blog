@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-16T07:23:12.031Z</updated>
+  <updated>2020-03-02T08:18:33.684Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>深造or就业</title>
-    <link href="http://yoursite.com/2020/02/16/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/"/>
-    <id>http://yoursite.com/2020/02/16/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/</id>
-    <published>2020-02-16T07:09:48.000Z</published>
-    <updated>2020-02-16T07:23:12.031Z</updated>
+    <title>Loam_livox</title>
+    <link href="http://yoursite.com/2020/03/02/Loam-livox/"/>
+    <id>http://yoursite.com/2020/03/02/Loam-livox/</id>
+    <published>2020-03-02T06:09:21.000Z</published>
+    <updated>2020-03-02T08:18:33.684Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;在最好的时代, 做一个了不起的梦.   &lt;/p&gt;
+&lt;p&gt;A fast robust high-precision LiDAR odometry and mapping package for LiDARs of small FoV  &lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&quot;1-Introduction&quot;&gt;&lt;a href=&quot;#1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;1 Introduction&quot;&gt;&lt;/a&gt;1 Introduction&lt;/h2&gt;&lt;p&gt;相比于传统的机械旋转式Lidar, mems振镜固态式Lidar价格相对低廉, 为Lidar的大规模拓展应用提供更多可能性，成为一大风口.  &lt;/p&gt;
+&lt;p&gt;固态Lidar特点：&lt;br&gt;1 Small FoV：小视角特征较少易出现退化现象，且易受到动态物体的影响&lt;br&gt;2 Irregular scanning pattern：不规则扫描不利于特征提取, 无法直观有效地获取点间的近邻关系&lt;br&gt;3 Non-repetitive scanning：即使Lidar处于静止状态, 相邻两帧点云也是不同的&lt;br&gt;4 Motion blur：同旋转式Lidar, 连续扫描使得帧内数据获取时间不严格一致  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../../files/PaperReading/Loam_livox/p4.png&quot; alt=&quot;扫描方式&quot; title=&quot;扫描方式&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;本文在LOAM的基础上进行拓展，研究内容包括特征提取, 运动补偿, 误关联剔除, 动态物体剔除  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
+    
+    
+      <category term="SLAM" scheme="http://yoursite.com/tags/SLAM/"/>
+    
+      <category term="Lidar" scheme="http://yoursite.com/tags/Lidar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深造or就业</title>
+    <link href="http://yoursite.com/2020/02/16/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/"/>
+    <id>http://yoursite.com/2020/02/16/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/</id>
+    <published>2020-02-16T07:09:48.000Z</published>
+    <updated>2020-03-02T08:23:27.557Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;在最好的时代, 做一个了不起的梦.  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;计划总是被变化甩上几条街的距离.   &lt;/p&gt;
+&lt;p&gt;突如其来的疫情扰乱着14亿人的计划. 工厂的设备停止运转, 工人隔离在家中等待着政府的号令; 学校的教室空空如也, 学生以观看直播的方式响应着”停课不停学”的计划; 医院的病房人满为患, 医护人员和感染病人争分夺秒地与病毒抗争着. 巨大的社会机器像是一列的&lt;a href=&quot;https://movie.douban.com/subject/3071441/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;雪国列车&lt;/a&gt;, 灾难、恐慌、权力、等级、人性等.   &lt;/p&gt;
     
     </summary>
     
@@ -46,13 +77,19 @@
     <link href="http://yoursite.com/2020/02/12/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2020/02/12/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2020-02-12T08:12:24.000Z</published>
-    <updated>2020-02-16T07:13:13.291Z</updated>
+    <updated>2020-03-02T08:20:37.943Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
 &lt;p&gt;博客是记录成长与进步的最好工具  &lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&quot;安装软件&quot;&gt;&lt;a href=&quot;#安装软件&quot; class=&quot;headerlink&quot; title=&quot;安装软件&quot;&gt;&lt;/a&gt;安装软件&lt;/h2&gt;&lt;p&gt;安装git  &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo apt-get install git-core&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装Node.js  &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sudo apt-get install -y nodejs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装Hexo  &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
