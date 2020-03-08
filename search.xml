@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Loam_livox</title>
+    <title>DS-SLAM</title>
+    <url>/2020/03/08/DS-SLAM/</url>
+    <content><![CDATA[<blockquote>
+<p> A Semantic Visual SLAM towards Dynamic Environments  </p>
+</blockquote>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>SLAM系统在动态场景中易受到动态物体的干扰，且创建的地图仅包含几何信息，如路标点地图或点云地图，无法用于高级别的场景理解。  </p>
+<p>DS-SLAM结合图像予以分割网络和运动一致性检测，消减场景中动态障碍物的影响，提高定位精度。同时，创建稠密的语义八叉树地图，满足机器人高级别的任务。  </p>
+<p><img src="../../../../../files/PaperReading/DS_SLAM/p1.png" alt="Overview" title="Overview">  </p>
+<a id="more"></a>  
+
+<h2 id="2-Methods"><a href="#2-Methods" class="headerlink" title="2 Methods"></a>2 Methods</h2><h3 id="2-1-Framework"><a href="#2-1-Framework" class="headerlink" title="2.1 Framework"></a>2.1 Framework</h3><p>DS-SLAM在ORB-SLAM2的基础上拓展，系统包含5个并行线程：特征追踪，局部建图，回环检测，稠密语义建图。  </p>
+<p><img src="../../../../../files/PaperReading/DS_SLAM/p2.png" alt="Framework" title="Framework">  </p>
+<h3 id="2-2-Semantic-Segmentation"><a href="#2-2-Semantic-Segmentation" class="headerlink" title="2.2 Semantic Segmentation"></a>2.2 Semantic Segmentation</h3><p>使用SegNet对彩图图像进行语义分割，并仅把行人作为潜在动态物体。  </p>
+<h3 id="2-3-Moving-Consistency-Check"><a href="#2-3-Moving-Consistency-Check" class="headerlink" title="2.3 Moving Consistency Check"></a>2.3 Moving Consistency Check</h3><p>根据光流信息查找特征点中是运动的点，具体实现细节不太理解。  </p>
+<p>之所以这么做是因为不完全相信语义分割的结果，其对于静止的人身上的特征点是选择保留的。并解释说，语义分割的线程较慢，特征追踪的线程较快，闲着也是闲着，所以增加了这个运动一致性检测的模块。WF??!!  </p>
+<h3 id="2-4-Outliers-Rejection"><a href="#2-4-Outliers-Rejection" class="headerlink" title="2.4 Outliers Rejection"></a>2.4 Outliers Rejection</h3><p>结合运动一致性和语义分割信息，仅剔除正在运动的行人身上的特征点对。  </p>
+<h3 id="2-5-Dense-Semantic-3D-Octo-tree-Map-Building"><a href="#2-5-Dense-Semantic-3D-Octo-tree-Map-Building" class="headerlink" title="2.5 Dense Semantic 3D Octo-tree Map Building"></a>2.5 Dense Semantic 3D Octo-tree Map Building</h3><p>八叉树地图灵活，紧凑，可更新，存储效率高，便于导航。  </p>
+<p>Voxel的语义属性采用概率表达，便于更新。  </p>
+<p>由于语义分割的精度有限，且在复杂场景中物体相互遮挡，导致语义分割的结果存在错误。Voxel的存在性使用log-odds值计算更新。  </p>
+<h2 id="3-Results"><a href="#3-Results" class="headerlink" title="3 Results"></a>3 Results</h2><p>使用TUM数据集和自采数据进行测试。  </p>
+<p>一帧耗时59.4ms，既然是多线程并行，耗时就不应该是各线程耗时和。  </p>
+<p>在动态场景中，相比于ORB-SLAM2，定位精度大幅提升。  </p>
+<p><img src="../../../../../files/PaperReading/DS_SLAM/p3.png" alt="ORB-SLAM2" title="ORB-SLAM2"><br><img src="../../../../../files/PaperReading/DS_SLAM/p4.png" alt="DS-SLAM" title="DS-SLAM">  </p>
+<h2 id="4-Ponder"><a href="#4-Ponder" class="headerlink" title="4 Ponder"></a>4 Ponder</h2><p>a) 运动一致性检测的实现细节?<br>b) Voxel语义属性概率表达如何实现?<br>c) Voxel存在性怎么使用log-odds更新?  </p>
+<h2 id="5-More"><a href="#5-More" class="headerlink" title="5 More"></a>5 More</h2><p>Paper：<a href="../../../../../files/PaperReading/DS_SLAM/DS-SLAM_A_Semantic_Visual_SLAM_towards_Dynamic_Environments.pdf">链接</a>  </p>
+]]></content>
+      <categories>
+        <category>PaperReading</category>
+      </categories>
+      <tags>
+        <tag>SLAM</tag>
+        <tag>RGB-D</tag>
+        <tag>Semantic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Loam-livox</title>
     <url>/2020/03/02/Loam-livox/</url>
     <content><![CDATA[<blockquote>
 <p>A fast robust high-precision LiDAR odometry and mapping package for LiDARs of small FoV  </p>
@@ -21,8 +57,8 @@
 <h2 id="3-Results"><a href="#3-Results" class="headerlink" title="3 Results"></a>3 Results</h2><p>建的图好看就完事了~<br><img src="../../../../../files/PaperReading/Loam_livox/p1.png" alt="SLAM_1" title="SLAM_1">  </p>
 <p><img src="../../../../../files/PaperReading/Loam_livox/p2.png" alt="SLAM_2" title="SLAM_2">  </p>
 <p><img src="../../../../../files/PaperReading/Loam_livox/p8.png" alt="SLAM_3" title="SLAM_8">  </p>
-<h2 id="4-Ponder"><a href="#4-Ponder" class="headerlink" title="4 Ponder"></a>4 Ponder</h2><p>1 特征提取模块的代码实现细节?<br>2 Piecewise processing中三个独立的子线程如何实现?<br>3 误匹配和动态物体的剔除技巧值得借鉴呀!  </p>
-<h2 id="5-More"><a href="#5-More" class="headerlink" title="5 More"></a>5 More</h2><p>Paper：<a href="../../../../../files/PaperReading/Loam_livox/Loam_livox_A_fast_robust_high-precision_LiDAR_odometry_and_mapping_package_for_LiDARs_of_small_FoV.pdf">链接</a><br>Code：<a href="https://github.com/hku-mars/loam_livox" target="_blank" rel="noopener">链接</a><br>Sensor：<a href="https://www.livoxtech.com/mid-40-and-mid-100" target="_blank" rel="noopener">连接</a></p>
+<h2 id="4-Ponder"><a href="#4-Ponder" class="headerlink" title="4 Ponder"></a>4 Ponder</h2><p>a) 特征提取模块的代码实现细节?<br>b) Piecewise processing中三个独立的子线程如何实现?<br>c) 误匹配和动态物体的剔除技巧值得借鉴呀!  </p>
+<h2 id="5-More"><a href="#5-More" class="headerlink" title="5 More"></a>5 More</h2><p>Paper：<a href="../../../../../files/PaperReading/Loam_livox/Loam-livox_A_fast_robust_high-precision_LiDAR_odometry_and_mapping_package_for_LiDARs_of_small_FoV.pdf">链接</a><br>Code：<a href="https://github.com/hku-mars/loam_livox" target="_blank" rel="noopener">链接</a><br>Sensor：<a href="https://www.livoxtech.com/mid-40-and-mid-100" target="_blank" rel="noopener">连接</a></p>
 ]]></content>
       <categories>
         <category>PaperReading</category>

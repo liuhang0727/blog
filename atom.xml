@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-02T08:18:33.684Z</updated>
+  <updated>2020-03-08T05:57:40.775Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Loam_livox</title>
+    <title>DS-SLAM</title>
+    <link href="http://yoursite.com/2020/03/08/DS-SLAM/"/>
+    <id>http://yoursite.com/2020/03/08/DS-SLAM/</id>
+    <published>2020-03-08T03:33:21.000Z</published>
+    <updated>2020-03-08T05:57:40.775Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt; A Semantic Visual SLAM towards Dynamic Environments  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-Introduction&quot;&gt;&lt;a href=&quot;#1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;1 Introduction&quot;&gt;&lt;/a&gt;1 Introduction&lt;/h2&gt;&lt;p&gt;SLAM系统在动态场景中易受到动态物体的干扰，且创建的地图仅包含几何信息，如路标点地图或点云地图，无法用于高级别的场景理解。  &lt;/p&gt;
+&lt;p&gt;DS-SLAM结合图像予以分割网络和运动一致性检测，消减场景中动态障碍物的影响，提高定位精度。同时，创建稠密的语义八叉树地图，满足机器人高级别的任务。  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../../files/PaperReading/DS_SLAM/p1.png&quot; alt=&quot;Overview&quot; title=&quot;Overview&quot;&gt;  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
+    
+    
+      <category term="SLAM" scheme="http://yoursite.com/tags/SLAM/"/>
+    
+      <category term="RGB-D" scheme="http://yoursite.com/tags/RGB-D/"/>
+    
+      <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Loam-livox</title>
     <link href="http://yoursite.com/2020/03/02/Loam-livox/"/>
     <id>http://yoursite.com/2020/03/02/Loam-livox/</id>
     <published>2020-03-02T06:09:21.000Z</published>
-    <updated>2020-03-02T08:18:33.684Z</updated>
+    <updated>2020-03-08T05:42:27.325Z</updated>
     
     <summary type="html">
     

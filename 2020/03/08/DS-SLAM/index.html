@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Loam-livox |  Hang
+    DS-SLAM |  Hang
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,7 +32,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-Loam-livox" class="article article-type-post" itemscope
+  <article id="post-DS-SLAM" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -40,7 +40,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Loam-livox
+  DS-SLAM
 </h1>
   
 
@@ -49,8 +49,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/03/02/Loam-livox/" class="article-date">
-  <time datetime="2020-03-02T06:09:21.000Z" itemprop="datePublished">2020-03-02</time>
+      <a href="/2020/03/08/DS-SLAM/" class="article-date">
+  <time datetime="2020-03-08T03:33:21.000Z" itemprop="datePublished">2020-03-08</time>
 </a>
       
   <div class="article-category">
@@ -64,7 +64,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">627字</span>
+            <span class="post-count">553字</span>
         </span>
     </span>
 
@@ -100,25 +100,28 @@
 
       
       <blockquote>
-<p>A fast robust high-precision LiDAR odometry and mapping package for LiDARs of small FoV  </p>
+<p> A Semantic Visual SLAM towards Dynamic Environments  </p>
 </blockquote>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>相比于传统的机械旋转式Lidar, mems振镜固态式Lidar价格相对低廉, 为Lidar的大规模拓展应用提供更多可能性，成为一大风口.  </p>
-<p>固态Lidar特点：<br>1 Small FoV：小视角特征较少易出现退化现象，且易受到动态物体的影响<br>2 Irregular scanning pattern：不规则扫描不利于特征提取, 无法直观有效地获取点间的近邻关系<br>3 Non-repetitive scanning：即使Lidar处于静止状态, 相邻两帧点云也是不同的<br>4 Motion blur：同旋转式Lidar, 连续扫描使得帧内数据获取时间不严格一致  </p>
-<p><img src="../../../../../files/PaperReading/Loam_livox/p4.png" alt="扫描方式" title="扫描方式">  </p>
-<p>本文在LOAM的基础上进行拓展，研究内容包括特征提取, 运动补偿, 误关联剔除, 动态物体剔除  </p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>SLAM系统在动态场景中易受到动态物体的干扰，且创建的地图仅包含几何信息，如路标点地图或点云地图，无法用于高级别的场景理解。  </p>
+<p>DS-SLAM结合图像予以分割网络和运动一致性检测，消减场景中动态障碍物的影响，提高定位精度。同时，创建稠密的语义八叉树地图，满足机器人高级别的任务。  </p>
+<p><img src="../../../../../files/PaperReading/DS_SLAM/p1.png" alt="Overview" title="Overview">  </p>
 <a id="more"></a>  
 
-<h2 id="2-Methods"><a href="#2-Methods" class="headerlink" title="2 Methods"></a>2 Methods</h2><h3 id="2-1-Points-selection-and-feature-extraction"><a href="#2-1-Points-selection-and-feature-extraction" class="headerlink" title="2.1 Points selection and feature extraction"></a>2.1 Points selection and feature extraction</h3><p>在进行特征提取前, 先筛选剔除以下几类点：视场边缘的点, 反射强度过大或过小的点, 与局部平面夹角近似0°或180°的点 (这里的局部平面怎么得到的呢?), 被遮挡的点 (怎么优雅地遍历呢?).  </p>
-<p>特征提取的方法延用LOAM (不规则的扫描方式, 怎么查找点间的近邻关系呢?), 同时考虑反射强度信息, 与近邻点的强度值差别较大的点亦定义为角点.  </p>
-<p><img src="../../../../../files/PaperReading/Loam_livox/p6.png" alt="特征提取与数据关联" title="特征提取与数据关联">  </p>
-<h3 id="2-2-Iterative-pose-optimization"><a href="#2-2-Iterative-pose-optimization" class="headerlink" title="2.2 Iterative pose optimization"></a>2.2 Iterative pose optimization</h3><p>延用LOAM中点到线和点到面的数据关联方式. 论文中使用的edge-to-edge和plane-to-plane的说法是不严谨的.  </p>
-<p>运动补偿的方法包括piecewise processing和linear interpolation两种. 其中piecewise processing是指将一帧点云按照扫描顺序分为三个sub-frames, 分别独立地对三个sub-frames进行帧与地图的匹配, sub-frames的匹配在并行的三个线程中独立处理 (值得借鉴), 并且试验中证明这种运动补偿的方式更优.  </p>
-<p>误匹配和动态物体的剔除在优化求解中统一处理. 迭代优化求解时，在迭代两遍后，然后剔除误差较大的20%的关联，然后再接着迭代优化 (机智啊!).  </p>
-<h2 id="3-Results"><a href="#3-Results" class="headerlink" title="3 Results"></a>3 Results</h2><p>建的图好看就完事了~<br><img src="../../../../../files/PaperReading/Loam_livox/p1.png" alt="SLAM_1" title="SLAM_1">  </p>
-<p><img src="../../../../../files/PaperReading/Loam_livox/p2.png" alt="SLAM_2" title="SLAM_2">  </p>
-<p><img src="../../../../../files/PaperReading/Loam_livox/p8.png" alt="SLAM_3" title="SLAM_8">  </p>
-<h2 id="4-Ponder"><a href="#4-Ponder" class="headerlink" title="4 Ponder"></a>4 Ponder</h2><p>a) 特征提取模块的代码实现细节?<br>b) Piecewise processing中三个独立的子线程如何实现?<br>c) 误匹配和动态物体的剔除技巧值得借鉴呀!  </p>
-<h2 id="5-More"><a href="#5-More" class="headerlink" title="5 More"></a>5 More</h2><p>Paper：<a href="../../../../../files/PaperReading/Loam_livox/Loam-livox_A_fast_robust_high-precision_LiDAR_odometry_and_mapping_package_for_LiDARs_of_small_FoV.pdf">链接</a><br>Code：<a href="https://github.com/hku-mars/loam_livox" target="_blank" rel="noopener">链接</a><br>Sensor：<a href="https://www.livoxtech.com/mid-40-and-mid-100" target="_blank" rel="noopener">连接</a></p>
+<h2 id="2-Methods"><a href="#2-Methods" class="headerlink" title="2 Methods"></a>2 Methods</h2><h3 id="2-1-Framework"><a href="#2-1-Framework" class="headerlink" title="2.1 Framework"></a>2.1 Framework</h3><p>DS-SLAM在ORB-SLAM2的基础上拓展，系统包含5个并行线程：特征追踪，局部建图，回环检测，稠密语义建图。  </p>
+<p><img src="../../../../../files/PaperReading/DS_SLAM/p2.png" alt="Framework" title="Framework">  </p>
+<h3 id="2-2-Semantic-Segmentation"><a href="#2-2-Semantic-Segmentation" class="headerlink" title="2.2 Semantic Segmentation"></a>2.2 Semantic Segmentation</h3><p>使用SegNet对彩图图像进行语义分割，并仅把行人作为潜在动态物体。  </p>
+<h3 id="2-3-Moving-Consistency-Check"><a href="#2-3-Moving-Consistency-Check" class="headerlink" title="2.3 Moving Consistency Check"></a>2.3 Moving Consistency Check</h3><p>根据光流信息查找特征点中是运动的点，具体实现细节不太理解。  </p>
+<p>之所以这么做是因为不完全相信语义分割的结果，其对于静止的人身上的特征点是选择保留的。并解释说，语义分割的线程较慢，特征追踪的线程较快，闲着也是闲着，所以增加了这个运动一致性检测的模块。WF??!!  </p>
+<h3 id="2-4-Outliers-Rejection"><a href="#2-4-Outliers-Rejection" class="headerlink" title="2.4 Outliers Rejection"></a>2.4 Outliers Rejection</h3><p>结合运动一致性和语义分割信息，仅剔除正在运动的行人身上的特征点对。  </p>
+<h3 id="2-5-Dense-Semantic-3D-Octo-tree-Map-Building"><a href="#2-5-Dense-Semantic-3D-Octo-tree-Map-Building" class="headerlink" title="2.5 Dense Semantic 3D Octo-tree Map Building"></a>2.5 Dense Semantic 3D Octo-tree Map Building</h3><p>八叉树地图灵活，紧凑，可更新，存储效率高，便于导航。  </p>
+<p>Voxel的语义属性采用概率表达，便于更新。  </p>
+<p>由于语义分割的精度有限，且在复杂场景中物体相互遮挡，导致语义分割的结果存在错误。Voxel的存在性使用log-odds值计算更新。  </p>
+<h2 id="3-Results"><a href="#3-Results" class="headerlink" title="3 Results"></a>3 Results</h2><p>使用TUM数据集和自采数据进行测试。  </p>
+<p>一帧耗时59.4ms，既然是多线程并行，耗时就不应该是各线程耗时和。  </p>
+<p>在动态场景中，相比于ORB-SLAM2，定位精度大幅提升。  </p>
+<p><img src="../../../../../files/PaperReading/DS_SLAM/p3.png" alt="ORB-SLAM2" title="ORB-SLAM2"><br><img src="../../../../../files/PaperReading/DS_SLAM/p4.png" alt="DS-SLAM" title="DS-SLAM">  </p>
+<h2 id="4-Ponder"><a href="#4-Ponder" class="headerlink" title="4 Ponder"></a>4 Ponder</h2><p>a) 运动一致性检测的实现细节?<br>b) Voxel语义属性概率表达如何实现?<br>c) Voxel存在性怎么使用log-odds更新?  </p>
+<h2 id="5-More"><a href="#5-More" class="headerlink" title="5 More"></a>5 More</h2><p>Paper：<a href="../../../../../files/PaperReading/DS_SLAM/DS-SLAM_A_Semantic_Visual_SLAM_towards_Dynamic_Environments.pdf">链接</a>  </p>
 
       
       <!-- reward -->
@@ -182,14 +185,14 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/03/02/Loam-livox/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/03/08/DS-SLAM/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lidar/" rel="tag">Lidar</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SLAM/" rel="tag">SLAM</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RGB-D/" rel="tag">RGB-D</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SLAM/" rel="tag">SLAM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Semantic/" rel="tag">Semantic</a></li></ul>
 
 
     </footer>
@@ -200,19 +203,10 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/03/08/DS-SLAM/" class="article-nav-link">
-        <strong class="article-nav-caption">prev post</strong>
-        <div class="article-nav-title">
-          
-            DS-SLAM
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/02/16/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/" class="article-nav-link">
+      <a href="/2020/03/02/Loam-livox/" class="article-nav-link">
         <strong class="article-nav-caption">next post</strong>
-        <div class="article-nav-title">深造or就业</div>
+        <div class="article-nav-title">Loam-livox</div>
       </a>
     
   </nav>
