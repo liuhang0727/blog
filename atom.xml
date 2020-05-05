@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hang</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-05-03T15:13:17.214Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Hang Liu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Groovy入门</title>
+    <link href="http://yoursite.com/2020/05/03/Groovy%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2020/05/03/Groovy%E5%85%A5%E9%97%A8/</id>
+    <published>2020-05-03T15:08:43.000Z</published>
+    <updated>2020-05-03T15:13:17.214Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Groovy入门</title>
+    <link href="http://yoursite.com/2020/05/03/%E6%95%99%E7%A8%8B/Groovy%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2020/05/03/%E6%95%99%E7%A8%8B/Groovy%E5%85%A5%E9%97%A8/</id>
+    <published>2020-05-03T15:08:43.000Z</published>
+    <updated>2020-05-03T15:14:49.794Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SVN服务器搭建与使用</title>
+    <link href="http://yoursite.com/2020/05/02/%E6%95%99%E7%A8%8B/SVN/"/>
+    <id>http://yoursite.com/2020/05/02/%E6%95%99%E7%A8%8B/SVN/</id>
+    <published>2020-05-02T03:13:56.000Z</published>
+    <updated>2020-05-02T04:23:34.196Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;SVN(subversion)是一个开放源代码的版本控制系统  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;服务器端&quot;&gt;&lt;a href=&quot;#服务器端&quot; class=&quot;headerlink&quot; title=&quot;服务器端&quot;&gt;&lt;/a&gt;服务器端&lt;/h2&gt;&lt;h3 id=&quot;1-安装-svn&quot;&gt;&lt;a href=&quot;#1-安装-svn&quot; class=&quot;headerlink&quot; title=&quot;1 安装 svn&quot;&gt;&lt;/a&gt;1 安装 svn&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo apt-get install subversion&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;2-创建仓库&quot;&gt;&lt;a href=&quot;#2-创建仓库&quot; class=&quot;headerlink&quot; title=&quot;2 创建仓库&quot;&gt;&lt;/a&gt;2 创建仓库&lt;/h3&gt;&lt;p&gt;在指定的文件夹下创建新的仓库(repository)。 如在 &lt;code&gt;/data/svn&lt;/code&gt; 文件夹下创建名为 &lt;code&gt;repo&lt;/code&gt; 的仓库：  &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; /data/svn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ svnadmin create /data/svn/repo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="SVN" scheme="http://yoursite.com/tags/SVN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CNN for Very Fast Ground Segmentation in Velodyne LiDAR Data</title>
+    <link href="http://yoursite.com/2020/04/08/PaperReading/CNN/"/>
+    <id>http://yoursite.com/2020/04/08/PaperReading/CNN/</id>
+    <published>2020-04-08T09:56:59.000Z</published>
+    <updated>2020-05-02T04:26:35.873Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
+    
+    
+      <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
+    
+      <category term="Segmentation" scheme="http://yoursite.com/tags/Segmentation/"/>
+    
+      <category term="Lidar" scheme="http://yoursite.com/tags/Lidar/"/>
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>思政课学习心得</title>
+    <link href="http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%85%9A%E6%80%A7%E4%BF%AE%E5%85%BB/"/>
+    <id>http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%85%9A%E6%80%A7%E4%BF%AE%E5%85%BB/</id>
+    <published>2020-04-05T02:45:14.000Z</published>
+    <updated>2020-04-08T11:44:27.354Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;青春逢盛世，奋斗正当时——做爱国主义的坚定弘扬者和践行者  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;春暖花开，疫情的阴霾终将渐渐散开。陈校长以《青春逢盛世，奋斗正当时——做爱国主义的坚定弘扬者和践行者》为主题，通过在线的方式为全校师生上了一堂精彩的思政大课。  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../../files/%E9%9A%8F%E7%AC%94/%E6%80%9D%E6%94%BF%E8%AF%BE%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/p1.jpg&quot; alt=&quot;听课现场&quot; title=&quot;听课现场&quot;&gt;  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="思政" scheme="http://yoursite.com/tags/%E6%80%9D%E6%94%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>心情</title>
+    <link href="http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/"/>
+    <id>http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/</id>
+    <published>2020-04-05T02:30:51.000Z</published>
+    <updated>2020-04-08T11:44:24.895Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;老家确实不适合长期居住，眼界和心思都跟着变得封闭狭窄，情绪会轻易地受到鸡毛蒜皮邻里间琐碎小事的影响，成了地地道道的小肚鸡肠鼠目寸光的乡下人，这与自命不凡的心中大志是完全相悖的。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="思考" scheme="http://yoursite.com/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DS-SLAM</title>
+    <link href="http://yoursite.com/2020/03/08/PaperReading/DS-SLAM/"/>
+    <id>http://yoursite.com/2020/03/08/PaperReading/DS-SLAM/</id>
+    <published>2020-03-08T03:33:21.000Z</published>
+    <updated>2020-04-08T11:40:42.732Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt; A Semantic Visual SLAM towards Dynamic Environments  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-Introduction&quot;&gt;&lt;a href=&quot;#1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;1 Introduction&quot;&gt;&lt;/a&gt;1 Introduction&lt;/h2&gt;&lt;p&gt;SLAM系统在动态场景中易受到动态物体的干扰，且创建的地图仅包含几何信息，如路标点地图或点云地图，无法用于高级别的场景理解。  &lt;/p&gt;
+&lt;p&gt;DS-SLAM结合图像予以分割网络和运动一致性检测，消减场景中动态障碍物的影响，提高定位精度。同时，创建稠密的语义八叉树地图，满足机器人高级别的任务。  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../../files/PaperReading/DS_SLAM/p1.png&quot; alt=&quot;Overview&quot; title=&quot;Overview&quot;&gt;  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
+    
+    
+      <category term="SLAM" scheme="http://yoursite.com/tags/SLAM/"/>
+    
+      <category term="RGB-D" scheme="http://yoursite.com/tags/RGB-D/"/>
+    
+      <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Loam-livox</title>
+    <link href="http://yoursite.com/2020/03/02/PaperReading/Loam-livox/"/>
+    <id>http://yoursite.com/2020/03/02/PaperReading/Loam-livox/</id>
+    <published>2020-03-02T06:09:21.000Z</published>
+    <updated>2020-04-08T11:40:33.036Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;A fast robust high-precision LiDAR odometry and mapping package for LiDARs of small FoV  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-Introduction&quot;&gt;&lt;a href=&quot;#1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;1 Introduction&quot;&gt;&lt;/a&gt;1 Introduction&lt;/h2&gt;&lt;p&gt;相比于传统的机械旋转式Lidar, mems振镜固态式Lidar价格相对低廉, 为Lidar的大规模拓展应用提供更多可能性，成为一大风口.  &lt;/p&gt;
+&lt;p&gt;固态Lidar特点：&lt;br&gt;1 Small FoV：小视角特征较少易出现退化现象，且易受到动态物体的影响&lt;br&gt;2 Irregular scanning pattern：不规则扫描不利于特征提取, 无法直观有效地获取点间的近邻关系&lt;br&gt;3 Non-repetitive scanning：即使Lidar处于静止状态, 相邻两帧点云也是不同的&lt;br&gt;4 Motion blur：同旋转式Lidar, 连续扫描使得帧内数据获取时间不严格一致  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../../files/PaperReading/Loam_livox/p4.png&quot; alt=&quot;扫描方式&quot; title=&quot;扫描方式&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;本文在LOAM的基础上进行拓展，研究内容包括特征提取, 运动补偿, 误关联剔除, 动态物体剔除  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
+    
+    
+      <category term="SLAM" scheme="http://yoursite.com/tags/SLAM/"/>
+    
+      <category term="Lidar" scheme="http://yoursite.com/tags/Lidar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深造or就业</title>
+    <link href="http://yoursite.com/2020/02/16/%E9%9A%8F%E7%AC%94/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/"/>
+    <id>http://yoursite.com/2020/02/16/%E9%9A%8F%E7%AC%94/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/</id>
+    <published>2020-02-16T07:09:48.000Z</published>
+    <updated>2020-04-08T11:44:24.895Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;在最好的时代，做一个了不起的梦。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;计划总是被变化甩上几条街的距离。突如其来的疫情扰乱着14亿人的计划。工厂的设备停止运转，工人隔离在家中等待着政府的号令; 学校的教室空空如也，学生以观看直播的方式响应着”停课不停学”的计划; 医院的病房人满为患，医护人员和感染病人争分夺秒地与病毒抗争着。巨大的社会机器像是一列的&lt;a href=&quot;https://movie.douban.com/subject/3071441/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;雪国列车&lt;/a&gt;，灾难、恐慌、权力、等级、人性等。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="深造" scheme="http://yoursite.com/tags/%E6%B7%B1%E9%80%A0/"/>
+    
+      <category term="就业" scheme="http://yoursite.com/tags/%E5%B0%B1%E4%B8%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+GitHub搭建个人博客</title>
+    <link href="http://yoursite.com/2020/02/12/%E6%95%99%E7%A8%8B/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2020/02/12/%E6%95%99%E7%A8%8B/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <published>2020-02-12T08:12:24.000Z</published>
+    <updated>2020-05-02T04:15:08.007Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;博客是记录成长与进步的最好工具  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-安装软件&quot;&gt;&lt;a href=&quot;#1-安装软件&quot; class=&quot;headerlink&quot; title=&quot;1 安装软件&quot;&gt;&lt;/a&gt;1 安装软件&lt;/h2&gt;&lt;p&gt;安装git  &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo apt-get install git-core&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装Node.js  &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sudo apt-get install -y nodejs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装Hexo  &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+  </entry>
+  
+</feed>
