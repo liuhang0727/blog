@@ -2,17 +2,6 @@
 <search>
   <entry>
     <title>Groovy入门</title>
-    <url>/2020/05/03/Groovy%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Groovy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Groovy入门</title>
     <url>/2020/05/03/%E6%95%99%E7%A8%8B/Groovy%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[]]></content>
       <categories>
@@ -183,9 +172,9 @@
         <category>PaperReading</category>
       </categories>
       <tags>
+        <tag>Semantic</tag>
         <tag>SLAM</tag>
         <tag>RGB-D</tag>
-        <tag>Semantic</tag>
       </tags>
   </entry>
   <entry>
@@ -216,8 +205,8 @@
         <category>PaperReading</category>
       </categories>
       <tags>
-        <tag>SLAM</tag>
         <tag>Lidar</tag>
+        <tag>SLAM</tag>
       </tags>
   </entry>
   <entry>
