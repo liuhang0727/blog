@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    DS-SLAM |  Hang
+    Daily Work |  Hang
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,7 +32,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-PaperReading/DS-SLAM" class="article article-type-post" itemscope
+  <article id="page-" class="article article-type-page" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -40,7 +40,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  DS-SLAM
+  Daily Work
 </h1>
   
 
@@ -48,47 +48,6 @@
     
 
     
-    <div class="article-meta">
-      <a href="/2020/03/08/PaperReading/DS-SLAM/" class="article-date">
-  <time datetime="2020-03-08T03:33:21.000Z" itemprop="datePublished">2020-03-08</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/PaperReading/">PaperReading</a>
-  </div>
-
-      
-      
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">553字</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2分钟</span>
-        </span>
-    </span>
-</div>
-
-      
-    </div>
-    
-
-    
-    
-    <div class="tocbot"></div>
-
-
-
-
 
     
 
@@ -100,28 +59,8 @@
 
       
       <blockquote>
-<p> A Semantic Visual SLAM towards Dynamic Environments  </p>
+<p>工作学习生活记录  </p>
 </blockquote>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>SLAM系统在动态场景中易受到动态物体的干扰，且创建的地图仅包含几何信息，如路标点地图或点云地图，无法用于高级别的场景理解。  </p>
-<p>DS-SLAM结合图像予以分割网络和运动一致性检测，消减场景中动态障碍物的影响，提高定位精度。同时，创建稠密的语义八叉树地图，满足机器人高级别的任务。  </p>
-<p><img src="../../../../../files/PaperReading/DS_SLAM/p1.png" alt="Overview" title="Overview">  </p>
-<a id="more"></a>  
-
-<h2 id="2-Methods"><a href="#2-Methods" class="headerlink" title="2 Methods"></a>2 Methods</h2><h3 id="2-1-Framework"><a href="#2-1-Framework" class="headerlink" title="2.1 Framework"></a>2.1 Framework</h3><p>DS-SLAM在ORB-SLAM2的基础上拓展，系统包含5个并行线程：特征追踪，局部建图，回环检测，稠密语义建图。  </p>
-<p><img src="../../../../../files/PaperReading/DS_SLAM/p2.png" alt="Framework" title="Framework">  </p>
-<h3 id="2-2-Semantic-Segmentation"><a href="#2-2-Semantic-Segmentation" class="headerlink" title="2.2 Semantic Segmentation"></a>2.2 Semantic Segmentation</h3><p>使用SegNet对彩图图像进行语义分割，并仅把行人作为潜在动态物体。  </p>
-<h3 id="2-3-Moving-Consistency-Check"><a href="#2-3-Moving-Consistency-Check" class="headerlink" title="2.3 Moving Consistency Check"></a>2.3 Moving Consistency Check</h3><p>根据光流信息查找特征点中是运动的点，具体实现细节不太理解。  </p>
-<p>之所以这么做是因为不完全相信语义分割的结果，其对于静止的人身上的特征点是选择保留的。并解释说，语义分割的线程较慢，特征追踪的线程较快，闲着也是闲着，所以增加了这个运动一致性检测的模块。WF??!!  </p>
-<h3 id="2-4-Outliers-Rejection"><a href="#2-4-Outliers-Rejection" class="headerlink" title="2.4 Outliers Rejection"></a>2.4 Outliers Rejection</h3><p>结合运动一致性和语义分割信息，仅剔除正在运动的行人身上的特征点对。  </p>
-<h3 id="2-5-Dense-Semantic-3D-Octo-tree-Map-Building"><a href="#2-5-Dense-Semantic-3D-Octo-tree-Map-Building" class="headerlink" title="2.5 Dense Semantic 3D Octo-tree Map Building"></a>2.5 Dense Semantic 3D Octo-tree Map Building</h3><p>八叉树地图灵活，紧凑，可更新，存储效率高，便于导航。  </p>
-<p>Voxel的语义属性采用概率表达，便于更新。  </p>
-<p>由于语义分割的精度有限，且在复杂场景中物体相互遮挡，导致语义分割的结果存在错误。Voxel的存在性使用log-odds值计算更新。  </p>
-<h2 id="3-Results"><a href="#3-Results" class="headerlink" title="3 Results"></a>3 Results</h2><p>使用TUM数据集和自采数据进行测试。  </p>
-<p>一帧耗时59.4ms，既然是多线程并行，耗时就不应该是各线程耗时和。  </p>
-<p>在动态场景中，相比于ORB-SLAM2，定位精度大幅提升。  </p>
-<p><img src="../../../../../files/PaperReading/DS_SLAM/p3.png" alt="ORB-SLAM2" title="ORB-SLAM2"><br><img src="../../../../../files/PaperReading/DS_SLAM/p4.png" alt="DS-SLAM" title="DS-SLAM">  </p>
-<h2 id="4-Ponder"><a href="#4-Ponder" class="headerlink" title="4 Ponder"></a>4 Ponder</h2><p>a) 运动一致性检测的实现细节?<br>b) Voxel语义属性概率表达如何实现?<br>c) Voxel存在性怎么使用log-odds更新?  </p>
-<h2 id="5-More"><a href="#5-More" class="headerlink" title="5 More"></a>5 More</h2><p>Paper：<a href="../../../../../files/PaperReading/DS_SLAM/DS-SLAM_A_Semantic_Visual_SLAM_towards_Dynamic_Environments.pdf">链接</a>  </p>
 
       
       <!-- reward -->
@@ -185,15 +124,13 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/03/08/PaperReading/DS-SLAM/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/daily_work/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RGB-D/" rel="tag">RGB-D</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SLAM/" rel="tag">SLAM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Semantic/" rel="tag">Semantic</a></li></ul>
-
 
     </footer>
 
@@ -201,25 +138,6 @@
 
   
   
-  <nav class="article-nav">
-    
-      <a href="/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/" class="article-nav-link">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            心情
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2020/03/02/PaperReading/Loam-livox/" class="article-nav-link">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">Loam-livox</div>
-      </a>
-    
-  </nav>
-
 
   
 
@@ -277,8 +195,6 @@
 
   
 
-  
-  
   
 
 </article>
@@ -437,30 +353,6 @@
 </script>
 
 
-
-
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer:'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto',
-    onClick: (e) => {
-      $('.toc-link').removeClass('is-active-link');
-      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
-      $(e.target.hash).scrollIntoView();
-      return false;
-    }
-  });
-</script>
 
 
 <script>
