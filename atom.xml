@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-03T15:14:49.794Z</updated>
+  <updated>2020-05-08T07:33:47.409Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Daily Work</title>
+    <link href="http://yoursite.com/2020/05/07/daily_work/daily_work/"/>
+    <id>http://yoursite.com/2020/05/07/daily_work/daily_work/</id>
+    <published>2020-05-07T14:55:00.000Z</published>
+    <updated>2020-05-08T07:33:47.409Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;工作学习生活记录 
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Groovy入门</title>
@@ -77,11 +101,11 @@
       <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
     
     
+      <category term="Lidar" scheme="http://yoursite.com/tags/Lidar/"/>
+    
       <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
     
       <category term="Segmentation" scheme="http://yoursite.com/tags/Segmentation/"/>
-    
-      <category term="Lidar" scheme="http://yoursite.com/tags/Lidar/"/>
     
       <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
     
@@ -155,9 +179,9 @@
       <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
     
     
-      <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
-    
       <category term="SLAM" scheme="http://yoursite.com/tags/SLAM/"/>
+    
+      <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
     
       <category term="RGB-D" scheme="http://yoursite.com/tags/RGB-D/"/>
     
@@ -186,9 +210,9 @@
       <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
     
     
-      <category term="Lidar" scheme="http://yoursite.com/tags/Lidar/"/>
-    
       <category term="SLAM" scheme="http://yoursite.com/tags/SLAM/"/>
+    
+      <category term="Lidar" scheme="http://yoursite.com/tags/Lidar/"/>
     
   </entry>
   
