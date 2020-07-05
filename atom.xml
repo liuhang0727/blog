@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-27T03:39:41.506Z</updated>
+  <updated>2020-07-05T07:04:24.295Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,91 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>随笔</title>
-    <link href="http://yoursite.com/2020/06/27/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200627/"/>
-    <id>http://yoursite.com/2020/06/27/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200627/</id>
-    <published>2020-06-27T02:20:00.000Z</published>
-    <updated>2020-06-27T03:39:41.506Z</updated>
+    <title>设计模式_工厂模式</title>
+    <link href="http://yoursite.com/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-07-05T05:44:32.000Z</published>
+    <updated>2020-07-05T07:04:24.295Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;六月的上海是淅淅沥沥不停的雨天，为这偌大的城市增添几分烟雨朦胧的隐秘感。 
-        
-      
+      &lt;h2 id=&quot;0-参考链接&quot;&gt;&lt;a href=&quot;#0-参考链接&quot; class=&quot;headerlink&quot; title=&quot;0 参考链接&quot;&gt;&lt;/a&gt;0 参考链接&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1e54y1X7bE?from=search&amp;seid=16085648626900326892&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;链接_视频&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.runoob.com/design-pattern/factory-pattern.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;链接_文档&lt;/a&gt;  &lt;/p&gt;
+&lt;h2 id=&quot;1-介绍&quot;&gt;&lt;a href=&quot;#1-介绍&quot; class=&quot;headerlink&quot; title=&quot;1 介绍&quot;&gt;&lt;/a&gt;1 介绍&lt;/h2&gt;&lt;p&gt;工厂模式，Factory Pattern。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="工厂模式" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="http://yoursite.com/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-07-05T05:11:34.000Z</published>
+    <updated>2020-07-05T07:01:06.987Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;0-简介&quot;&gt;&lt;a href=&quot;#0-简介&quot; class=&quot;headerlink&quot; title=&quot;0 简介&quot;&gt;&lt;/a&gt;0 简介&lt;/h2&gt;&lt;p&gt;&lt;code&gt;设计模式&lt;/code&gt; (&lt;code&gt;Design Pattern&lt;/code&gt;) 代表了最佳实践，通常被有经验的面向对象的软件开发人员所采用。&lt;br&gt;设计模式是软件开发人员在软件开发过程中面临的一般问题的解决方案，是众多软件开发人员经过相当长一段时间的试验和错误总结出来的。&lt;br&gt;设计模式是一套被反复使用的，多数人知晓的，经过分类编目的，代码设计经验的总结。&lt;br&gt;使用设计模式是为了重用代码，让代码更容易被他人理解，保证代码可靠性。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式_单例模式</title>
+    <link href="http://yoursite.com/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-07-05T03:04:22.000Z</published>
+    <updated>2020-07-05T07:01:02.211Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;0-参考链接&quot;&gt;&lt;a href=&quot;#0-参考链接&quot; class=&quot;headerlink&quot; title=&quot;0 参考链接&quot;&gt;&lt;/a&gt;0 参考链接&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1Gz4y1d7RJ?from=search&amp;seid=16674851411794252260&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;链接_视频&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.runoob.com/design-pattern/singleton-pattern.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;链接_文档&lt;/a&gt;  &lt;/p&gt;
+&lt;h2 id=&quot;1-介绍&quot;&gt;&lt;a href=&quot;#1-介绍&quot; class=&quot;headerlink&quot; title=&quot;1 介绍&quot;&gt;&lt;/a&gt;1 介绍&lt;/h2&gt;&lt;p&gt;单例模式，Singleton Pattern。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="单例模式" scheme="http://yoursite.com/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔_20200627</title>
+    <link href="http://yoursite.com/2020/06/27/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200627/"/>
+    <id>http://yoursite.com/2020/06/27/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200627/</id>
+    <published>2020-06-27T02:20:00.000Z</published>
+    <updated>2020-07-05T03:06:19.420Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;六月的上海是淅淅沥沥不停的雨天，为这偌大的城市增添几分烟雨朦胧的隐秘感。  &lt;/p&gt;
+&lt;p&gt;端午节小假期就要结束了，自然醒洗漱后的上午，打开窗户，呼吸着湿润的新鲜空气，隔着耳机听着滴答的雨声。安静下来，整理下近些日子的心情吧。&lt;br&gt;如同往常，心中能有希望坐下来记录些什么的冲动，必定是因为丧到了一定程度。所以接下来的内容必定会略显消极悲观，但却是对生活的真实认知与感受。&lt;br&gt;&lt;code&gt;请选择性阅读，不接受指点评论。&lt;/code&gt;  &lt;/p&gt;
     
     </summary>
     
@@ -44,23 +114,17 @@
   </entry>
   
   <entry>
-    <title>随笔</title>
-    <link href="http://yoursite.com/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94/"/>
-    <id>http://yoursite.com/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94/</id>
+    <title>随笔_20200510</title>
+    <link href="http://yoursite.com/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200510/"/>
+    <id>http://yoursite.com/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200510/</id>
     <published>2020-05-10T08:01:59.000Z</published>
-    <updated>2020-06-27T02:19:52.064Z</updated>
+    <updated>2020-07-05T03:14:12.606Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;丢掉学生的标签成为社会人已经有一段时间了，入职了校招时曾经引以为豪的商汤科技。既然使用&lt;code&gt;曾经&lt;/code&gt;来形容，便意味着这些日子并不是十分如意。 
-        
-      
+&lt;p&gt;丢掉学生的标签成为社会人已经有一段时间了，入职了校招时曾经引以为豪的商汤科技。既然使用&lt;code&gt;曾经&lt;/code&gt;来形容，便意味着这些日子并不是十分如意。  &lt;/p&gt;
     
     </summary>
     
@@ -99,30 +163,11 @@
   </entry>
   
   <entry>
-    <title>Groovy入门</title>
-    <link href="http://yoursite.com/2020/05/03/%E6%95%99%E7%A8%8B/Groovy%E5%85%A5%E9%97%A8/"/>
-    <id>http://yoursite.com/2020/05/03/%E6%95%99%E7%A8%8B/Groovy%E5%85%A5%E9%97%A8/</id>
-    <published>2020-05-03T15:08:43.000Z</published>
-    <updated>2020-05-03T15:14:49.794Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SVN服务器搭建与使用</title>
-    <link href="http://yoursite.com/2020/05/02/%E6%95%99%E7%A8%8B/SVN/"/>
-    <id>http://yoursite.com/2020/05/02/%E6%95%99%E7%A8%8B/SVN/</id>
+    <link href="http://yoursite.com/2020/05/02/%E6%95%99%E7%A8%8B/SVN%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2020/05/02/%E6%95%99%E7%A8%8B/SVN%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
     <published>2020-05-02T03:13:56.000Z</published>
-    <updated>2020-05-02T04:23:34.196Z</updated>
+    <updated>2020-07-05T03:10:17.890Z</updated>
     
     <summary type="html">
     
@@ -145,36 +190,11 @@
   </entry>
   
   <entry>
-    <title>CNN for Very Fast Ground Segmentation in Velodyne LiDAR Data</title>
-    <link href="http://yoursite.com/2020/04/08/PaperReading/CNN/"/>
-    <id>http://yoursite.com/2020/04/08/PaperReading/CNN/</id>
-    <published>2020-04-08T09:56:59.000Z</published>
-    <updated>2020-05-02T04:26:35.873Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="PaperReading" scheme="http://yoursite.com/categories/PaperReading/"/>
-    
-    
-      <category term="Lidar" scheme="http://yoursite.com/tags/Lidar/"/>
-    
-      <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
-    
-      <category term="Segmentation" scheme="http://yoursite.com/tags/Segmentation/"/>
-    
-      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>思政课学习心得</title>
-    <link href="http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%85%9A%E6%80%A7%E4%BF%AE%E5%85%BB/"/>
-    <id>http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%85%9A%E6%80%A7%E4%BF%AE%E5%85%BB/</id>
+    <title>随笔_20200405</title>
+    <link href="http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200405/"/>
+    <id>http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200405/</id>
     <published>2020-04-05T02:45:14.000Z</published>
-    <updated>2020-04-08T11:44:27.354Z</updated>
+    <updated>2020-07-05T03:09:48.557Z</updated>
     
     <summary type="html">
     
@@ -190,16 +210,18 @@
       <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
       <category term="思政" scheme="http://yoursite.com/tags/%E6%80%9D%E6%94%BF/"/>
     
   </entry>
   
   <entry>
-    <title>心情</title>
-    <link href="http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/"/>
-    <id>http://yoursite.com/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/</id>
-    <published>2020-04-05T02:30:51.000Z</published>
-    <updated>2020-04-08T11:44:24.895Z</updated>
+    <title>随笔_20200404</title>
+    <link href="http://yoursite.com/2020/04/04/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200404/"/>
+    <id>http://yoursite.com/2020/04/04/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200404/</id>
+    <published>2020-04-04T02:30:51.000Z</published>
+    <updated>2020-07-05T03:09:38.226Z</updated>
     
     <summary type="html">
     
@@ -211,7 +233,7 @@
       <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="思考" scheme="http://yoursite.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
@@ -239,9 +261,9 @@
     
       <category term="SLAM" scheme="http://yoursite.com/tags/SLAM/"/>
     
-      <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
-    
       <category term="RGB-D" scheme="http://yoursite.com/tags/RGB-D/"/>
+    
+      <category term="Semantic" scheme="http://yoursite.com/tags/Semantic/"/>
     
   </entry>
   
@@ -275,11 +297,11 @@
   </entry>
   
   <entry>
-    <title>深造or就业</title>
-    <link href="http://yoursite.com/2020/02/16/%E9%9A%8F%E7%AC%94/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/"/>
-    <id>http://yoursite.com/2020/02/16/%E9%9A%8F%E7%AC%94/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/</id>
+    <title>随笔_20200216</title>
+    <link href="http://yoursite.com/2020/02/16/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200216/"/>
+    <id>http://yoursite.com/2020/02/16/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200216/</id>
     <published>2020-02-16T07:09:48.000Z</published>
-    <updated>2020-04-08T11:44:24.895Z</updated>
+    <updated>2020-07-05T03:08:44.467Z</updated>
     
     <summary type="html">
     
@@ -293,6 +315,8 @@
     
       <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="深造" scheme="http://yoursite.com/tags/%E6%B7%B1%E9%80%A0/"/>
     

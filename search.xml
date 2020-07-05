@@ -1,10 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>随笔</title>
+    <title>设计模式_工厂模式</title>
+    <url>/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="0-参考链接"><a href="#0-参考链接" class="headerlink" title="0 参考链接"></a>0 参考链接</h2><p><a href="https://www.bilibili.com/video/BV1e54y1X7bE?from=search&seid=16085648626900326892" target="_blank" rel="noopener">链接_视频</a><br><a href="https://www.runoob.com/design-pattern/factory-pattern.html" target="_blank" rel="noopener">链接_文档</a>  </p>
+<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h2><p>工厂模式，Factory Pattern。  </p>
+<a id="more"></a>  
+
+<p><code>意图：</code>创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来只当新创建对象。定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。<br><code>主要解决：</code>接口选择的问题。<br><code>何时使用：</code>我们明确地计划不同条件下创建不同实例时。<br><code>如何解决：</code>让其子类实现工厂接口，返回的也是一个抽象的产品。<br><code>关键代码：</code>创建过程在其子类执行。<br><code>优点：</code>  </p>
+<ul>
+<li>调用者想创建一个对象，只要知道其名称即可。  </li>
+<li>扩展性高，如果想增加一个产品，只要扩展一个工厂类即可。  </li>
+<li>屏蔽产品的具体实现，调用者只关心产品的接口。  </li>
+</ul>
+<p><code>使用场景：</code>  </p>
+<ul>
+<li>日志记录器，记录可能记录到本地硬盘，系统事件或远程服务器等，用户可以选择记录日志到什么地方。  </li>
+<li>设计一个连接服务器的框架，需要三个协议，<code>POP3</code>，<code>IMAP</code>和<code>HTTP</code>，可以把三个作为产品类，共同实现一个接口。  </li>
+</ul>
+<p><code>Highlight：</code>  </p>
+<ul>
+<li>创建复杂对象适合使用工厂模式，而简单对象，特别是只需要通过<code>new</code>就可以完成创建的对象，无需使用工厂模式。如果使用工厂模式，就需要引入一个工厂类，增加系统的复杂度。(<code>So, what is 复杂对象 ??</code>)  </li>
+</ul>
+<h2 id="2-实现"><a href="#2-实现" class="headerlink" title="2 实现"></a>2 实现</h2><h3 id="2-0-case-0-子类数据成员一致"><a href="#2-0-case-0-子类数据成员一致" class="headerlink" title="2.0 case_0: 子类数据成员一致"></a>2.0 case_0: 子类数据成员<code>一致</code></h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 父类Color，接口类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Color</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 关键字virtual修饰，虚函数</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类Red继承父类Color</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Red</span> :</span> <span class="keyword">public</span> Color &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 关键字override修饰</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Red"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类Green继承父类Color</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Green</span> :</span> <span class="keyword">public</span> Color &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 关键字override修饰</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Green"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 工厂类，生成对象</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Factory</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 关键字static修饰，定位为类的静态方法，调用时不需要有类的对象</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> Color* <span class="title">getColor</span><span class="params">(<span class="built_in">std</span>::<span class="built_in">string</span> color)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (color == <span class="string">"Red"</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Red;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (color == <span class="string">"Green"</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Green;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="built_in">unique_ptr</span>&lt;Color&gt; <span class="title">pRed</span><span class="params">(Factory::getColor(<span class="string">"Red"</span>))</span></span>;</span><br><span class="line">    <span class="function"><span class="built_in">unique_ptr</span>&lt;Color&gt; <span class="title">pGreen</span><span class="params">(Factory::getColor(<span class="string">"Green"</span>))</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(pRed != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">        pRed-&gt;draw();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(pGreen != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">        pGreen-&gt;draw();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-case-1-子类数据成员不一致"><a href="#2-1-case-1-子类数据成员不一致" class="headerlink" title="2.1 case_1: 子类数据成员不一致"></a>2.1 case_1: 子类数据成员<code>不一致</code></h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 父类Color，接口类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Color</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 关键字virtual修饰，虚函数</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类Red继承父类Color</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Red</span> :</span> <span class="keyword">public</span> Color &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Red(<span class="built_in">std</span>::<span class="built_in">string</span> a, <span class="keyword">int</span> b)</span><br><span class="line">        : a_(<span class="built_in">std</span>::<span class="built_in">move</span>(a)), b_(b) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 关键字override修饰</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; a_ &lt;&lt; <span class="string">", "</span> &lt;&lt; b_ &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">string</span> a_;</span><br><span class="line">    <span class="keyword">int</span> b_;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类Green继承父类Color</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Green</span> :</span> <span class="keyword">public</span> Color &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Green(<span class="built_in">std</span>::<span class="built_in">string</span> a)</span><br><span class="line">        : a_(<span class="built_in">std</span>::<span class="built_in">move</span>(a)) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 关键字override修饰</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; a_ &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">string</span> a_;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 工厂不一定需要是类，一个函数也可以</span></span><br><span class="line"><span class="comment">// 泛型，模板</span></span><br><span class="line"><span class="comment">// 参数个数不定, typename ... Args可变参数</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Object, <span class="keyword">typename</span> ... Args&gt;</span><br><span class="line"><span class="function">Color* <span class="title">factoryColor</span><span class="params">(<span class="keyword">typename</span> ... Args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Object(args ...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="built_in">unique_ptr</span>&lt;Color&gt; <span class="title">pRed</span><span class="params">(factoryColor(<span class="string">"Red"</span>, <span class="number">666</span>))</span></span>;</span><br><span class="line">    <span class="function"><span class="built_in">unique_ptr</span>&lt;Color&gt; <span class="title">pGreen</span><span class="params">(factoryColor(<span class="string">"Green"</span>))</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(pRed != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">        pRed-&gt;draw();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(pGreen != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">        pGreen-&gt;draw();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>设计模式</tag>
+        <tag>工厂模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式</title>
+    <url>/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="0-简介"><a href="#0-简介" class="headerlink" title="0 简介"></a>0 简介</h2><p><code>设计模式</code> (<code>Design Pattern</code>) 代表了最佳实践，通常被有经验的面向对象的软件开发人员所采用。<br>设计模式是软件开发人员在软件开发过程中面临的一般问题的解决方案，是众多软件开发人员经过相当长一段时间的试验和错误总结出来的。<br>设计模式是一套被反复使用的，多数人知晓的，经过分类编目的，代码设计经验的总结。<br>使用设计模式是为了重用代码，让代码更容易被他人理解，保证代码可靠性。  </p>
+<a id="more"></a>
+
+<h2 id="1-分类"><a href="#1-分类" class="headerlink" title="1 分类"></a>1 分类</h2><h3 id="1-0-创建型模式-Creational-Patterns"><a href="#1-0-创建型模式-Creational-Patterns" class="headerlink" title="1.0 创建型模式 (Creational Patterns)"></a>1.0 创建型模式 (Creational Patterns)</h3><p>这是设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用<code>new</code>运算符实例化对象。这使得程序在判断针对某个给定实例需要创建哪个对象时更加灵活。  </p>
+<ul>
+<li>工厂模式 (Factory Pattern)  </li>
+<li>抽象工厂模式 (Abstract Factory Pattern)  </li>
+<li>单例模式 (Singleton Pattern)  </li>
+<li>建造者模式 (Builder Pattern)  </li>
+<li>原型模式 (Prototype Pattern)  </li>
+</ul>
+<h3 id="1-1-结构性模式"><a href="#1-1-结构性模式" class="headerlink" title="1.1 结构性模式"></a>1.1 结构性模式</h3><p>这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。  </p>
+<ul>
+<li>适配器模式 (Adapter Pattern)  </li>
+<li>桥接模式 (Bridge Pattern)  </li>
+<li>过滤器模式 (Filter, Criteria Pattern)  </li>
+<li>组合模式 (Composite Pattern)  </li>
+<li>装饰器模式 (Decorator Pattern)  </li>
+<li>外观模式 (Facade Pattern)  </li>
+<li>享元模式 (Flyweight Pattern)  </li>
+<li>代理模式 (Proxy Pattern)  </li>
+</ul>
+<h3 id="1-2-行为型模式"><a href="#1-2-行为型模式" class="headerlink" title="1.2 行为型模式"></a>1.2 行为型模式</h3><p>这些设计模式特别关注对象之间的通信。  </p>
+<ul>
+<li>责任链模式 (Chain of Responsibility Pattern)  </li>
+<li>命令模式 (Command Pattern)  </li>
+<li>解释器模式 (Interpreter Pattern)  </li>
+<li>迭代器模式 (Iterator Pattern)  </li>
+<li>中介者模式 (Mediator Pattern)  </li>
+<li>备忘录模式 (Memento Pattern)  </li>
+<li>观察者模式 (Observer Pattern)  </li>
+<li>状态模式 (State Pattern)  </li>
+<li>空对象模式 (Null Object Pattern)  </li>
+<li>策略模式 (Strategy Pattern)  </li>
+<li>模板模式 (Template Pattern)  </li>
+<li>访问者模式 (Visitor Pattern)  </li>
+</ul>
+<h3 id="1-3-J2EE模式"><a href="#1-3-J2EE模式" class="headerlink" title="1.3 J2EE模式"></a>1.3 J2EE模式</h3><p>这些设计模式特别关注表示层。  </p>
+<ul>
+<li>MVC 模式 (MVC Pattern)  </li>
+<li>业务代表模式 (Business Delegate Pattern)  </li>
+<li>组合实体模式 (Composite Entity Pattern)  </li>
+<li>数据访问对象模式 (Data Access Object Pattern)  </li>
+<li>前端控制器模式 (Front Controller Pattern)  </li>
+<li>拦截过滤器模式 (Intercepting Filter Pattern)  </li>
+<li>服务定位器模式 (Service Locator Pattern)  </li>
+<li>传输对象模式 (Transfer Object Pattern)  </li>
+</ul>
+<h2 id="2-原则"><a href="#2-原则" class="headerlink" title="2 原则"></a>2 原则</h2><h3 id="2-0-开闭原则-Open-Close-Principle"><a href="#2-0-开闭原则-Open-Close-Principle" class="headerlink" title="2.0 开闭原则 (Open Close Principle)"></a>2.0 开闭原则 (Open Close Principle)</h3><p>对<code>扩展开放，对修改关闭</code>。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。  </p>
+<h3 id="2-1-里氏代换原则-Liskov-Substitution-Principle"><a href="#2-1-里氏代换原则-Liskov-Substitution-Principle" class="headerlink" title="2.1 里氏代换原则 (Liskov Substitution Principle)"></a>2.1 里氏代换原则 (Liskov Substitution Principle)</h3><p>任何基类可以出现的地方，子类一定可以出现。LSP 是继承复用的基石，只有当派生类可以替换掉基类，且软件单位的功能不受到影响时，基类才能真正被复用，而派生类也能够在基类的基础上增加新的行为。里氏代换原则是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化，而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。  </p>
+<h3 id="2-2-依赖倒转原则-Dependence-Inversion-Principle"><a href="#2-2-依赖倒转原则-Dependence-Inversion-Principle" class="headerlink" title="2.2 依赖倒转原则 (Dependence Inversion Principle)"></a>2.2 依赖倒转原则 (Dependence Inversion Principle)</h3><p>这个原则是开闭原则的基础，具体内容：针对接口编程，依赖于抽象而不依赖于具体。  </p>
+<h3 id="2-3-接口隔离原则-Interface-Segregation-Principle"><a href="#2-3-接口隔离原则-Interface-Segregation-Principle" class="headerlink" title="2.3 接口隔离原则 (Interface Segregation Principle)"></a>2.3 接口隔离原则 (Interface Segregation Principle)</h3><p>使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度。由此可见，其实设计模式就是从大型软件架构出发、便于升级和维护的软件设计思想，它强调降低依赖，降低耦合。  </p>
+<h3 id="2-4-迪米特法则，又称最少知道原则-Demeter-Principle"><a href="#2-4-迪米特法则，又称最少知道原则-Demeter-Principle" class="headerlink" title="2.4 迪米特法则，又称最少知道原则 (Demeter Principle)"></a>2.4 迪米特法则，又称最少知道原则 (Demeter Principle)</h3><p>一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立。  </p>
+<h3 id="2-5-合成复用原则-Composite-Reuse-Principle"><a href="#2-5-合成复用原则-Composite-Reuse-Principle" class="headerlink" title="2.5 合成复用原则 (Composite Reuse Principle)"></a>2.5 合成复用原则 (Composite Reuse Principle)</h3><p>尽量使用合成/聚合的方式，而不是使用继承。  </p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式_单例模式</title>
+    <url>/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="0-参考链接"><a href="#0-参考链接" class="headerlink" title="0 参考链接"></a>0 参考链接</h2><p><a href="https://www.bilibili.com/video/BV1Gz4y1d7RJ?from=search&seid=16674851411794252260" target="_blank" rel="noopener">链接_视频</a><br><a href="https://www.runoob.com/design-pattern/singleton-pattern.html" target="_blank" rel="noopener">链接_文档</a>  </p>
+<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h2><p>单例模式，Singleton Pattern。  </p>
+<a id="more"></a>  
+
+<p><code>意图：</code>保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br><code>主要解决：</code>一个全局使用的类频繁地创建与销毁。<br><code>何时使用：</code>需要控制实例数目，节省系统资源的时候。<br><code>如何解决：</code>判断系统是否已经有这个单例，如果有则返回，如果无则创建。<br><code>关键代码：</code>构造函数是私有的。<br><code>优点：</code>  </p>
+<ul>
+<li>在内存中只有一个实例，减少了内存开销，尤其是频繁的创建和销毁实例。  </li>
+<li>避免对资源的多重占用。（比如写文件操作）  </li>
+</ul>
+<p><code>使用场景：</code>  </p>
+<ul>
+<li>要求生产唯一序列号。  </li>
+<li>创建的一个对象需要消耗的资源过多，比如I/O与数据库的连接等。</li>
+<li>日志类。  </li>
+</ul>
+<p><code>Highlight：</code></p>
+<ul>
+<li>单例类只能有一个实例。  </li>
+<li>单例类必须自己创建自己的唯一实例。  </li>
+<li>单例类必须给所有其他对象提供这一实例 <code>?</code>  </li>
+<li>指针<code>*</code>存在线程安全问题，以下实现使用引用<code>&amp;</code>的方式。  </li>
+</ul>
+<h2 id="2-实现"><a href="#2-实现" class="headerlink" title="2 实现"></a>2 实现</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singletom</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>: </span><br><span class="line">    ~Singleton() &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Singleton() destruct"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建对象的唯一的用户接口</span></span><br><span class="line">    <span class="comment">// static修饰符，使其与类无关</span></span><br><span class="line">    <span class="comment">// 返回引用&amp;，而不是指针*</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> Singleton&amp; <span class="title">CreateObject</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建static对象</span></span><br><span class="line">        <span class="keyword">static</span> Singletom obj;</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Option_A</span></span><br><span class="line">    <span class="comment">// 使用delete，禁用拷贝构造</span></span><br><span class="line">    Singleton(Singleton&amp; obj) = <span class="keyword">delete</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Option_A</span></span><br><span class="line">    <span class="comment">// = 运算符重载</span></span><br><span class="line">    <span class="comment">// Singleton* operator= (Singleton&amp; obj) = delete;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="comment">// 普通构造函数</span></span><br><span class="line">    <span class="comment">// 构造函数私有化</span></span><br><span class="line">    Singleton() &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Singleton() construct"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Option_A</span></span><br><span class="line">    <span class="comment">// 同时还要限制其拷贝构造函数</span></span><br><span class="line">    <span class="comment">// 拷贝构造函数私有化</span></span><br><span class="line">    <span class="comment">// Singleton(Singleton&amp; obj) &#123;</span></span><br><span class="line">    <span class="comment">//     std::cout &lt;&lt; "Singleton(Singleton&amp; obj) construct" &lt;&lt; std::endl;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用引用来接函数返回值</span></span><br><span class="line">    <span class="comment">// 因为方法是static，所以使用 类名::函数名 方式调用</span></span><br><span class="line">    <span class="comment">// pObj1和pObj2是同一个实例（同一块内存）</span></span><br><span class="line">    Singletom&amp; pObj1 = Singletom::CreateObject();</span><br><span class="line">    Singletom&amp; pObj2 = Singletom::CreateObject();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>设计模式</tag>
+        <tag>单例模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随笔_20200627</title>
     <url>/2020/06/27/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200627/</url>
     <content><![CDATA[<p>六月的上海是淅淅沥沥不停的雨天，为这偌大的城市增添几分烟雨朦胧的隐秘感。  </p>
 <p>端午节小假期就要结束了，自然醒洗漱后的上午，打开窗户，呼吸着湿润的新鲜空气，隔着耳机听着滴答的雨声。安静下来，整理下近些日子的心情吧。<br>如同往常，心中能有希望坐下来记录些什么的冲动，必定是因为丧到了一定程度。所以接下来的内容必定会略显消极悲观，但却是对生活的真实认知与感受。<br><code>请选择性阅读，不接受指点评论。</code>  </p>
+<a id="more"></a>  
+
 <p>从老妈生病开始吧。为什么生活总是选择欺负最善良无助的人？和大多数农村家庭主妇一样，老妈没有念过大学，没有过人的天资，没有很高的远见，没有科学的教育培养孩子的方法。但她是如此的勤勤恳恳，任劳任怨，朴素节俭，这些词都太过于轻描淡写不足以形容。世上的甘甜有七分，您却只尝了三分；世上的苦难有三分，您缺尝了七分。老姐好心带老妈去医院体检身体，查找常年低质量睡眠的病因，大夫开了中药帮助调理身体，可万万没想到中药却引起了更加严重的急性肝损伤，并导致黄疸。老妈病黄消瘦的面庞，异常高的吓人的血常规指标，无一不使人担忧至极。<br>生活又放过了谁呢，每个人不都正在经历苦难吗？有人因为连续的考研失败而变得抑郁，有人还在因为没有小论文无法按期拿到毕业和学位证而苦恼，有人已经毕业了却还未能拿到相对满意的工作offer，有人失去了亲人生活崩塌性破碎…。幸福的人总是相似的，不幸的人各有各的不幸。生活本是如此，不如意十有八九。等它们都过去了，就变成了一个个故事。  </p>
 ]]></content>
       <categories>
@@ -15,11 +152,13 @@
       </tags>
   </entry>
   <entry>
-    <title>随笔</title>
-    <url>/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94/</url>
+    <title>随笔_20200510</title>
+    <url>/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200510/</url>
     <content><![CDATA[<blockquote>
 </blockquote>
 <p>丢掉学生的标签成为社会人已经有一段时间了，入职了校招时曾经引以为豪的商汤科技。既然使用<code>曾经</code>来形容，便意味着这些日子并不是十分如意。  </p>
+  <a id="more"></a>  
+
 <p>直到如今，关于职业与理想也并没有很清晰的规划。大四专业实习在武汉做外业测量，工作内容是施工基坑和周围建筑物的沉降变形监测，化身为名副其实的跑杆神童，如果非要总结实习收获，便只能是掌握了各种扶尺姿势，这种和专科生混在一起的工作怎么能对得起自命不凡的性格。获得保研资格后，甚至还曾为武大老师开出的<code>10W+</code>的年薪动摇读研的想法，公司做三维扫描仪研发，相比于外业测量工作已提升了一个Level，无论如何，现在看来当时的抉择也是正确的。选择导师时，由于夏令营成绩排名靠后，而被林老师推给叶老师，专业从遥感转为摄影测量，在入学后，又误打误撞地入了<code>SLAM</code>的坑，算是半脚踏入了互联网行业。受助于春红的内推，有幸能够去<code>Momenta</code>实习，并遇到了如此Nice的Mentor海瑞，提升了自身能力，认识了<code>自动驾驶</code>。相对可观的薪资，公司的工作研发氛围，和在校期间不开心等因素混杂在一起，成了继续求学道路上的巨大阻碍，并最终放弃了读博的梦想。人生的轨迹被无数的随机和选择排列组合着，没有明确的通行指示标志，反倒是像一张密密麻麻的由数不清的立交，隧道、匝口编织成的迷魂阵。  </p>
 <p>入职前被告知被安排到系统组，而不是本该的地图定位组，Title从算法研发工程师转为系统开发工程师，入职后更是发现做的工作连自动驾驶都谈不上，而是<code>ADAS</code>相关，这和心心念的<code>定位算法研发</code>产生巨大落差，同时带来的是无数的思考与质问。  </p>
 ]]></content>
@@ -87,19 +226,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Groovy入门</title>
-    <url>/2020/05/03/%E6%95%99%E7%A8%8B/Groovy%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Groovy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SVN服务器搭建与使用</title>
-    <url>/2020/05/02/%E6%95%99%E7%A8%8B/SVN/</url>
+    <url>/2020/05/02/%E6%95%99%E7%A8%8B/SVN%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<blockquote>
 <p>SVN(subversion)是一个开放源代码的版本控制系统  </p>
 </blockquote>
@@ -173,22 +301,8 @@
       </tags>
   </entry>
   <entry>
-    <title>CNN for Very Fast Ground Segmentation in Velodyne LiDAR Data</title>
-    <url>/2020/04/08/PaperReading/CNN/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>PaperReading</category>
-      </categories>
-      <tags>
-        <tag>Lidar</tag>
-        <tag>Semantic</tag>
-        <tag>Segmentation</tag>
-        <tag>CNN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>思政课学习心得</title>
-    <url>/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%85%9A%E6%80%A7%E4%BF%AE%E5%85%BB/</url>
+    <title>随笔_20200405</title>
+    <url>/2020/04/05/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200405/</url>
     <content><![CDATA[<blockquote>
 <p>青春逢盛世，奋斗正当时——做爱国主义的坚定弘扬者和践行者  </p>
 </blockquote>
@@ -207,12 +321,13 @@
         <category>随笔</category>
       </categories>
       <tags>
+        <tag>随笔</tag>
         <tag>思政</tag>
       </tags>
   </entry>
   <entry>
-    <title>心情</title>
-    <url>/2020/04/05/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/</url>
+    <title>随笔_20200404</title>
+    <url>/2020/04/04/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200404/</url>
     <content><![CDATA[<p>老家确实不适合长期居住，眼界和心思都跟着变得封闭狭窄，情绪会轻易地受到鸡毛蒜皮邻里间琐碎小事的影响，成了地地道道的小肚鸡肠鼠目寸光的乡下人，这与自命不凡的心中大志是完全相悖的。  </p>
 <a id="more"></a>  
 
@@ -224,7 +339,7 @@
         <category>随笔</category>
       </categories>
       <tags>
-        <tag>思考</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -259,8 +374,8 @@
       </categories>
       <tags>
         <tag>SLAM</tag>
-        <tag>Semantic</tag>
         <tag>RGB-D</tag>
+        <tag>Semantic</tag>
       </tags>
   </entry>
   <entry>
@@ -296,8 +411,8 @@
       </tags>
   </entry>
   <entry>
-    <title>深造or就业</title>
-    <url>/2020/02/16/%E9%9A%8F%E7%AC%94/%E6%B7%B1%E9%80%A0or%E5%B0%B1%E4%B8%9A/</url>
+    <title>随笔_20200216</title>
+    <url>/2020/02/16/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200216/</url>
     <content><![CDATA[<blockquote>
 <p>在最好的时代，做一个了不起的梦。  </p>
 </blockquote>
@@ -317,6 +432,7 @@
         <category>随笔</category>
       </categories>
       <tags>
+        <tag>随笔</tag>
         <tag>深造</tag>
         <tag>就业</tag>
       </tags>
@@ -387,6 +503,16 @@
 ]]></content>
   </entry>
   <entry>
+    <title>archives</title>
+    <url>/archives/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Album</title>
     <url>/album/index.html</url>
     <content><![CDATA[<blockquote>
@@ -397,18 +523,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>archives</title>
-    <url>/archives/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>tags</title>
     <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>

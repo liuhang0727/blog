@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    随笔 |  Hang
+    Tag: 单例模式 |  Hang
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,236 +32,55 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-随笔/随笔" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
+  <article class="articles">
     
-    <header class="article-header">
+    
+    <h1 class="page-type-title">#&nbsp单例模式</h1>
+    
+    
+  
+  
+  
+  
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2020" class="archive-year">2020</a>
+    </div>
+    <div class="archives">
+      
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  <time datetime="2020-07-05T03:04:22.000Z" itemprop="datePublished">07/05</time>
+</a>
        
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  随笔
-</h1>
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"
+    >设计模式_单例模式</a
+  >
+</h2>
   
 
     </header>
     
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" rel="tag">单例模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
 
     
-    <div class="article-meta">
-      <a href="/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94/" class="article-date">
-  <time datetime="2020-05-10T08:01:59.000Z" itemprop="datePublished">2020-05-10</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
   </div>
-
-      
-      
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">572字</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
-        </span>
-    </span>
-</div>
-
-      
-    </div>
-    
-
-    
-    
-
-
-
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <blockquote>
-</blockquote>
-<p>丢掉学生的标签成为社会人已经有一段时间了，入职了校招时曾经引以为豪的商汤科技。既然使用<code>曾经</code>来形容，便意味着这些日子并不是十分如意。  </p>
-<p>直到如今，关于职业与理想也并没有很清晰的规划。大四专业实习在武汉做外业测量，工作内容是施工基坑和周围建筑物的沉降变形监测，化身为名副其实的跑杆神童，如果非要总结实习收获，便只能是掌握了各种扶尺姿势，这种和专科生混在一起的工作怎么能对得起自命不凡的性格。获得保研资格后，甚至还曾为武大老师开出的<code>10W+</code>的年薪动摇读研的想法，公司做三维扫描仪研发，相比于外业测量工作已提升了一个Level，无论如何，现在看来当时的抉择也是正确的。选择导师时，由于夏令营成绩排名靠后，而被林老师推给叶老师，专业从遥感转为摄影测量，在入学后，又误打误撞地入了<code>SLAM</code>的坑，算是半脚踏入了互联网行业。受助于春红的内推，有幸能够去<code>Momenta</code>实习，并遇到了如此Nice的Mentor海瑞，提升了自身能力，认识了<code>自动驾驶</code>。相对可观的薪资，公司的工作研发氛围，和在校期间不开心等因素混杂在一起，成了继续求学道路上的巨大阻碍，并最终放弃了读博的梦想。人生的轨迹被无数的随机和选择排列组合着，没有明确的通行指示标志，反倒是像一张密密麻麻的由数不清的立交，隧道、匝口编织成的迷魂阵。  </p>
-<p>入职前被告知被安排到系统组，而不是本该的地图定位组，Title从算法研发工程师转为系统开发工程师，入职后更是发现做的工作连自动驾驶都谈不上，而是<code>ADAS</code>相关，这和心心念的<code>定位算法研发</code>产生巨大落差，同时带来的是无数的思考与质问。  </p>
-
-      
-      <!-- reward -->
-      
-    </div>
-      <!-- copyright -->
-      
-        <div class="declare">
-          <ul class="post-copyright">
-            <li>
-              <i class="ri-copyright-line"></i>
-              <strong>版权声明： </strong s>
-              本博客所有文章均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow"
-                target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
-            </li>
-          </ul>
-        </div>
-        
-    <footer class="article-footer">
-      
-          
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        share
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-  
-  <nav class="article-nav">
-    
-      <a href="/2020/06/27/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200627/" class="article-nav-link">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            随笔
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2020/05/07/daily_work/daily_work/" class="article-nav-link">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">Daily Work</div>
-      </a>
-    
-  </nav>
-
-
-  
-
-  
-  
-<!-- valine评论 -->
-<div id="vcomments-box">
-    <div id="vcomments">
-    </div>
-</div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
-<script>
-    new Valine({
-        el: '#vcomments',
-        app_id: '',
-        app_key: '',
-        path: window.location.pathname,
-        notify: 'false',
-        verify: 'false',
-        avatar: 'mp',
-        placeholder: '给我的文章加点评论吧~',
-        recordIP: true
-    });
-    const infoEle = document.querySelector('#vcomments .info');
-    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
-        infoEle.childNodes.forEach(function (item) {
-            item.parentNode.removeChild(item);
-        });
-    }
-</script>
-<style>
-    #vcomments-box {
-        padding: 5px 30px;
-    }
-
-    @media screen and (max-width: 800px) {
-        #vcomments-box {
-            padding: 5px 0px;
-        }
-    }
-
-    #vcomments-box #vcomments {
-        background-color: #fff;
-    }
-
-    .v .vlist .vcard .vh {
-        padding-right: 20px;
-    }
-
-    .v .vlist .vcard {
-        padding-left: 10px;
-    }
-</style>
-
-  
-
-  
-  
-  
-
 </article>
+      
+      
+    </div>
+  </div>
+  
+  
+
+  
 </section>
       <footer class="footer">
   <div class="outer">
@@ -417,30 +236,6 @@
 </script>
 
 
-
-
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer:'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto',
-    onClick: (e) => {
-      $('.toc-link').removeClass('is-active-link');
-      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
-      $(e.target.hash).scrollIntoView();
-      return false;
-    }
-  });
-</script>
 
 
 <script>
