@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-08T07:33:47.409Z</updated>
+  <updated>2020-06-27T03:39:41.506Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Daily Work</title>
-    <link href="http://yoursite.com/2020/05/07/daily_work/daily_work/"/>
-    <id>http://yoursite.com/2020/05/07/daily_work/daily_work/</id>
-    <published>2020-05-07T14:55:00.000Z</published>
-    <updated>2020-05-08T07:33:47.409Z</updated>
+    <title>随笔</title>
+    <link href="http://yoursite.com/2020/06/27/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200627/"/>
+    <id>http://yoursite.com/2020/06/27/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200627/</id>
+    <published>2020-06-27T02:20:00.000Z</published>
+    <updated>2020-06-27T03:39:41.506Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;六月的上海是淅淅沥沥不停的雨天，为这偌大的城市增添几分烟雨朦胧的隐秘感。 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔</title>
+    <link href="http://yoursite.com/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94/"/>
+    <id>http://yoursite.com/2020/05/10/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94/</id>
+    <published>2020-05-10T08:01:59.000Z</published>
+    <updated>2020-06-27T02:19:52.064Z</updated>
     
     <summary type="html">
     
@@ -30,7 +57,38 @@
         
         
           &lt;blockquote&gt;
-&lt;p&gt;工作学习生活记录 
+&lt;/blockquote&gt;
+&lt;p&gt;丢掉学生的标签成为社会人已经有一段时间了，入职了校招时曾经引以为豪的商汤科技。既然使用&lt;code&gt;曾经&lt;/code&gt;来形容，便意味着这些日子并不是十分如意。 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Daily Work</title>
+    <link href="http://yoursite.com/2020/05/07/daily_work/daily_work/"/>
+    <id>http://yoursite.com/2020/05/07/daily_work/daily_work/</id>
+    <published>2020-05-07T14:55:00.000Z</published>
+    <updated>2020-05-09T04:40:28.294Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;工作学习生活记录  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;2020-05-08&quot;&gt;&lt;a href=&quot;#2020-05-08&quot; class=&quot;headerlink&quot;
         
       
     
