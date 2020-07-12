@@ -1,6 +1,344 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++_新特性</title>
+    <url>/2020/07/12/C++/C++_%E6%96%B0%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++_基础知识点</title>
+    <url>/2020/07/05/C++/C++_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h2 id="0-默认参"><a href="#0-默认参" class="headerlink" title="0 默认参"></a>0 默认参</h2><p><a href="https://www.bilibili.com/video/BV1SE411i7sj" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>函数允许提供默认参。  </li>
+<li>默认参数可以写在声明或定义处，但只能出现在一个地方，一般写在声明处。  </li>
+<li>当一个参数有默认参时，该参数右边必须都出现默认参。  </li>
+</ul>
+<a id="more"></a>  
+
+<h2 id="1-const常量"><a href="#1-const常量" class="headerlink" title="1 const常量"></a>1 const常量</h2><p><a href="https://www.bilibili.com/video/BV1SE411i7JK" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>const</code>用于修饰变量，将变量变为常量，常量一旦定义，就不可以修改。  </li>
+<li>编译器在程序的编译时期做的检查，即定义后是不可以通过赋值修改的，但在运行时期时可以修改的。  </li>
+</ul>
+<h2 id="2-const指针"><a href="#2-const指针" class="headerlink" title="2 const指针"></a>2 const指针</h2><p><a href="https://www.bilibili.com/video/BV1SE411i7jL" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>const T*</code>表示不能修改指针指向的内容，指针本身的值可以修改。  </li>
+<li><code>T const*</code>同<code>const T*</code>，表示不能修改指针指向的内容，指针本身的值可以修改。  </li>
+<li><code>T* const</code>表示该指针是一个常量，意味着指针本身的值不能被修改，但是指针指向的内容可以修改。  </li>
+<li><code>const T* const</code>表示指针指向的内容和指针本身均不能被修改。  </li>
+<li><code>const_cast</code>类型转换可以用于去除<code>const</code>修饰。  </li>
+</ul>
+<h2 id="3-内联函数"><a href="#3-内联函数" class="headerlink" title="3 内联函数"></a>3 内联函数</h2><p><a href="https://www.bilibili.com/video/BV1SE411i7sq" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>inline</code>函数能够节省进出函数的系统的耗时。  </li>
+<li><code>inline</code>是对编译器的建议，编译器可以根据函数的大小自动选择是否内联。  </li>
+<li><code>debug</code>版本没有<code>inline</code>，为了方便调试。  </li>
+<li>内联函数必须写在头文件中。  </li>
+</ul>
+<h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4 引用"></a>4 引用</h2><p><a href="https://www.bilibili.com/video/BV1NJ411278G" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV1NJ41127tq" target="_blank" rel="noopener">链接_视频_2</a><br><a href="https://www.bilibili.com/video/BV1NJ41127ib" target="_blank" rel="noopener">链接_视频_3</a>  </p>
+<ul>
+<li>引用<code>&amp;</code>是变量的别名。  </li>
+<li>引用在定义时必须初始化，且不能使用常量为引用赋值。  </li>
+<li>只有常量引用可以使用常量来初始化。<code>const int&amp; crefN = 12;</code>  </li>
+<li>引用的关系一旦建立则无法修改。  </li>
+<li>不存在二级引用，可以使用指针的引用来替代二级指针。  </li>
+</ul>
+<h2 id="5-作用域与数据隐藏"><a href="#5-作用域与数据隐藏" class="headerlink" title="5 作用域与数据隐藏"></a>5 作用域与数据隐藏</h2><p><a href="https://www.bilibili.com/video/BV1NJ41127vn" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>作用域包括全局作用域，名字空间域，局部作用域，块作用域和类作用域。  </li>
+<li>在不同的作用域可以定义多个相同名字的变量。  </li>
+<li>内部的变量会隐藏外部的变量(从内-&gt;外查找)。  </li>
+</ul>
+<h2 id="6-名字空间"><a href="#6-名字空间" class="headerlink" title="6 名字空间"></a>6 名字空间</h2><p><a href="https://www.bilibili.com/video/BV1NJ41127eK" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV17J41127VN" target="_blank" rel="noopener">链接_视频_2</a>  </p>
+<ul>
+<li>关键字<code>namespace</code>  </li>
+<li>一种作用域的划分，通常用于区分项目中模块或组件。  </li>
+<li>名字空间可以分开使用。(在多个地方使用同一个名字空间  </li>
+<li>名字空间可以嵌套。  </li>
+<li>名字空间可以取别名。<code>namespace t = test</code>  </li>
+<li>单独使用<code>::</code>表示使用全局作用域。  </li>
+<li>名字空间的使用方法:<ol>
+<li>直接使用。<code>名字空间::内容</code> (推荐  </li>
+<li>声明名字空间。<code>using namespace 名字空间</code>  </li>
+<li>声明只使用名字空间的部分变量或函数。<code>using 名字空间::内容</code>  </li>
+</ol>
+</li>
+</ul>
+<h2 id="7-函数重载"><a href="#7-函数重载" class="headerlink" title="7 函数重载"></a>7 函数重载</h2><p><a href="https://www.bilibili.com/video/BV17J411273R" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV17J41127gD" target="_blank" rel="noopener">链接_视频_2</a>  </p>
+<ul>
+<li>函数重载指<code>C++</code>中相同名字的函数。(C中是不支持重载的  </li>
+<li>函数重载的条件: （函数要素：函数名，函数参数，函数返回值，函数的调用约定<ol>
+<li>函数名必须相同。  </li>
+<li>函数参数个数不同，类型不同，顺序不同。  </li>
+<li>函数返回值，调用约定不做考虑。  </li>
+<li>作用域相同。  </li>
+</ol>
+</li>
+</ul>
+<h2 id="8-面向对象及类"><a href="#8-面向对象及类" class="headerlink" title="8 面向对象及类"></a>8 面向对象及类</h2><p><a href="https://www.bilibili.com/video/BV17J41127p7" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV17J41127Hn" target="_blank" rel="noopener">链接_视频_2</a><br><a href="https://www.bilibili.com/video/BV17J41127t3" target="_blank" rel="noopener">链接_视频_3</a><br><a href="https://www.bilibili.com/video/BV17J411274c" target="_blank" rel="noopener">链接_视频_4</a>  </p>
+<ul>
+<li>对象 = 数据(数据类型) + 行为(函数)  </li>
+<li>面向对象特点:<ol>
+<li>封装。(数据成员＋成员函数  </li>
+<li>继承。  </li>
+<li>多态。  </li>
+</ol>
+</li>
+<li><code>C++</code>中<code>struct</code>与<code>class</code>的唯一区别就是成员的默认访问权限。(结构体默认是公有<code>public</code>权限，类默认是<code>private</code>权限  </li>
+</ul>
+<h2 id="9-this指针"><a href="#9-this指针" class="headerlink" title="9 this指针"></a>9 <code>this</code>指针</h2><p><a href="https://www.bilibili.com/video/BV17J41127sw" target="_blank" rel="noopener">链接_视频 (18</a>  </p>
+<ul>
+<li>同一个类的对象，其成员函数地址是一样的，表示同一个类的对象的成员函数共用的。(数据是独立的，成员函数是共用的  </li>
+<li>成员函数调用时会偷偷的传递<code>this</code>指针，通过寄存器<code>ecx</code>传递，这种传递方式称为<code>thiscall</code>。  </li>
+</ul>
+<h2 id="10-构造函数"><a href="#10-构造函数" class="headerlink" title="10 构造函数"></a>10 构造函数</h2><p><a href="https://www.bilibili.com/video/BV1jJ41127dx" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV1jJ41127RB" target="_blank" rel="noopener">链接_视频_2</a>  </p>
+<ul>
+<li>用于初始化对象的成员。  </li>
+<li>由编译器在合适的时机调用。  </li>
+<li>不允许有返回值。  </li>
+<li>可以有参数，支持默认参。  <ol>
+<li>仅有一个参数时，该函数即表示构造函数，又表示一种隐式转换，从而支持<code>CTest obj = 1</code>，可以使用关键字<code>explict</code>表示支持显示调用构造函数，不允许隐式转换。  </li>
+<li>支持函数重载。  </li>
+<li>如果不重载构造函数，编译器会提供一个无参的默认构造函数。   <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">CTest() = <span class="keyword">default</span>;  <span class="comment">// 表示使用默认的构造函数</span></span><br><span class="line">CTest() = <span class="keyword">delete</span>;   <span class="comment">// 表示禁止使用某函数(删除</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>构造函数可以使用初始化列表来初始化成员。  </li>
+<li>构造函数通常不要手动调用。  </li>
+</ul>
+<h2 id="11-析构函数"><a href="#11-析构函数" class="headerlink" title="11 析构函数"></a>11 析构函数</h2><p><a href="https://www.bilibili.com/video/BV1jJ411279W" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>完成资源的反初始化。(释放资源  </li>
+<li>在类名前加<code>~</code>。  </li>
+<li>由编译器决定调用时机，不需要手动调用。  </li>
+<li>不能有参数和返回值。  </li>
+<li>不能重载。  </li>
+</ul>
+<h2 id="12-构造函数与析构函数的调用时机"><a href="#12-构造函数与析构函数的调用时机" class="headerlink" title="12 构造函数与析构函数的调用时机"></a>12 构造函数与析构函数的调用时机</h2><p><a href="https://www.bilibili.com/video/BV1jJ411279B" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>构造函数和析构函数需要时公有的。  </li>
+<li>栈上的局部对象的调用时机:<ol>
+<li>构造: 声明该对象时构造。  </li>
+<li>析构: 对象出作用域时调用析构。  </li>
+</ol>
+</li>
+<li>全局对象(堆? no)的调用时机:<ol>
+<li>构造: 进入到<code>main</code>函数之前。  </li>
+<li>析构: 出<code>main</code>函数之后。  </li>
+</ol>
+</li>
+</ul>
+<h2 id="13-拷贝构造函数"><a href="#13-拷贝构造函数" class="headerlink" title="13 拷贝构造函数"></a>13 拷贝构造函数</h2><p><a href="https://www.bilibili.com/video/BV17J41127Fr" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>作用: 本质上也是一种构造函数。  </li>
+<li>调用时机: 当用一个对象创建另外一个对象时调用。<code>CTest t2 = t1;</code>  </li>
+<li>缺省的拷贝构造函数的作用: 完全的把对象1拷贝给对象2。(<code>memcpy</code>  </li>
+</ul>
+<h2 id="14-浅拷贝与深拷贝"><a href="#14-浅拷贝与深拷贝" class="headerlink" title="14 浅拷贝与深拷贝"></a>14 浅拷贝与深拷贝</h2><p><a href="https://www.bilibili.com/video/BV1jJ41127Zt" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>缺省的拷贝构造函数中是浅拷贝。(类似两个指针指向同一个堆空间  </li>
+<li>当对象中的成员函数存在一种需要分配的资源时(malloc)，为了避免在析构时重复释放，需要重写(深)拷贝构造函数或禁用拷贝构造函数。  </li>
+</ul>
+<h2 id="15-new与delete运算符"><a href="#15-new与delete运算符" class="headerlink" title="15 new与delete运算符"></a>15 <code>new</code>与<code>delete</code>运算符</h2><p><a href="https://www.bilibili.com/video/BV1jJ41127oW" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV17J41127Np" target="_blank" rel="noopener">链接_视频_2</a>  </p>
+<ul>
+<li><code>new</code>分配空间，调用构造函数。  </li>
+<li><code>delete</code>调用析构函数，释放空间。  </li>
+<li><code>new</code>和<code>delete</code>都是在堆上分配和释放空间。  </li>
+<li>相比于<code>C</code>的<code>malloc</code>和<code>free</code>，<code>new</code>与<code>delete</code>能够调用类的构造和析构函数。  </li>
+<li>对于基本数据类型(相对于自定义的类对象)而言，<code>new</code>与<code>delete</code>仅仅分配或释放内存空间。(<code>int</code>， <code>float</code>，…  </li>
+<li>当申请一个堆上的对象时，使用<code>new</code>和<code>delete</code>，不能使用<code>malloc</code>和<code>free</code>替换。  </li>
+<li><code>new []</code>分配数组，<code>delete []</code>释放数组空间。    <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">CTest* pt = <span class="keyword">new</span> CTest[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">delete</span> [] pt;</span><br></pre></td></tr></table></figure></li>
+<li><code>new []</code>与<code>delete []</code>要配套使用，特别是申请对象数组时。  </li>
+<li>vs编译器会在<code>new []</code>申请对象数组时，在堆开始的前4个字节写入当前数组的长度，用于记录<code>delete []</code>释放时，析构调用的次数。  </li>
+</ul>
+<h2 id="16-类的派生与继承"><a href="#16-类的派生与继承" class="headerlink" title="16 类的派生与继承"></a>16 类的派生与继承</h2><p><a href="https://www.bilibili.com/video/BV17J41127P7" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV17J41127AM" target="_blank" rel="noopener">链接_视频_2</a><br><a href="https://www.bilibili.com/video/BV17J41127wP" target="_blank" rel="noopener">链接_视频_3</a>  </p>
+<ul>
+<li>子类(派生类)，父类(基类)。  </li>
+<li>保护成员(<code>protected</code>)除了自身或派生类以外，不能在其他类外使用。  </li>
+<li>继承的可见性<table>
+<thead>
+<tr>
+<th align="center">父类</th>
+<th align="center">继承方式</th>
+<th align="center">子类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center">公有继承(<code>public</code>)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">公有成员(<code>public</code>)</td>
+<td align="center"></td>
+<td align="center">公有成员(<code>public</code>)</td>
+</tr>
+<tr>
+<td align="center">保护成员(<code>protected</code>)</td>
+<td align="center"></td>
+<td align="center">保护成员(<code>protected</code>)</td>
+</tr>
+<tr>
+<td align="center">私有成员(<code>private</code>)</td>
+<td align="center"></td>
+<td align="center">不可见</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">保护继承(<code>protected</code>)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">公有成员(<code>public</code>)</td>
+<td align="center"></td>
+<td align="center">保护成员(<code>protected</code>)</td>
+</tr>
+<tr>
+<td align="center">保护成员(<code>protected</code>)</td>
+<td align="center"></td>
+<td align="center">保护成员(<code>protected</code>)</td>
+</tr>
+<tr>
+<td align="center">私有成员(<code>private</code>)</td>
+<td align="center"></td>
+<td align="center">不可见</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">私有继承(<code>private</code>)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">公有成员(<code>public</code>)</td>
+<td align="center"></td>
+<td align="center">私有成员(<code>private</code>)</td>
+</tr>
+<tr>
+<td align="center">保护成员(<code>protected</code>)</td>
+<td align="center"></td>
+<td align="center">私有成员(<code>private</code>)</td>
+</tr>
+<tr>
+<td align="center">私有成员(<code>private</code>)</td>
+<td align="center"></td>
+<td align="center">不可见</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</li>
+<li>继承的可见性是由编译器在编译时刻做的限制。  </li>
+<li>子类指针转换为父类指针是安全的，父类指针转换为子类指针是不安全的。(数据成员个数问题，指针越界  </li>
+</ul>
+<h2 id="17-派生类中构造与析构顺序"><a href="#17-派生类中构造与析构顺序" class="headerlink" title="17 派生类中构造与析构顺序"></a>17 派生类中构造与析构顺序</h2><p><a href="https://www.bilibili.com/video/BV17J41127u1" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>派生类的构造顺序，先父类后子类。  </li>
+<li>派生类的析构顺序，先子类后父类。  </li>
+<li>成员类的构造顺序，先成员类后自己。  </li>
+<li>成员类的析构顺序，先自己后成员类。  </li>
+</ul>
+<h2 id="18-初始化列表"><a href="#18-初始化列表" class="headerlink" title="18 初始化列表"></a>18 初始化列表</h2><p><a href="https://www.bilibili.com/video/BV17J41127gP" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>初始化列表作用:<ol>
+<li>调用父类的有参构造。  </li>
+<li>对于自身成员的初始化。  </li>
+<li>对于常量成员的初始化。  </li>
+</ol>
+</li>
+</ul>
+<h2 id="19-函数隐藏"><a href="#19-函数隐藏" class="headerlink" title="19 函数隐藏"></a>19 函数隐藏</h2><p><a href="https://www.bilibili.com/video/BV17J41127gP" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>函数隐藏的条件  <ol>
+<li>作用域不同。(父类与子类  </li>
+<li>函数名相同。  </li>
+<li>参数列表，调用约定和返回值不考虑。  </li>
+</ol>
+</li>
+</ul>
+<h2 id="20-多态与虚函数"><a href="#20-多态与虚函数" class="headerlink" title="20 多态与虚函数"></a>20 多态与虚函数</h2><p><a href="https://www.bilibili.com/video/BV17J41127uM" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV1ZJ411t7xQ" target="_blank" rel="noopener">链接_视频_2</a><br><a href="https://www.bilibili.com/video/BV1gz41187UX" target="_blank" rel="noopener">链接_视频_3</a>  </p>
+<ul>
+<li>父类中使用<code>virtual</code>关键字将成员函数变为虚函数。  </li>
+<li>虚函数的调用原理：<ol>
+<li>虚函数的调用方法是间接调用，先查虚表地址，再查虚表中的虚函数指针。  </li>
+<li>增加了虚函数<code>virtual</code>关键字的对象的头部4个字节是虚表地址。(单继承的情况下  </li>
+</ol>
+</li>
+</ul>
+<h2 id="21-函数覆盖-虚函数"><a href="#21-函数覆盖-虚函数" class="headerlink" title="21 函数覆盖 (虚函数"></a>21 函数覆盖 (虚函数</h2><p><a href="https://www.bilibili.com/video/BV1Ez411q7Ue" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV1Mg4y167VM" target="_blank" rel="noopener">链接_视频_2</a>  </p>
+<ul>
+<li>函数覆盖的条件:<ol>
+<li>作用域不同。(父子类之间继承关系  </li>
+<li>函数名，参数列表(参数的个数，顺序，类型)，返回值，调用约定(<code>__thiscall</code>)必须相同。  </li>
+<li>有<code>virtual</code>关键字。  </li>
+</ol>
+</li>
+<li>虚表大小的确定:<ol>
+<li>由编译器在编译时期确定的。  </li>
+<li>在运行时的内存中并没有个数的表示。  </li>
+</ol>
+</li>
+<li>虚表中虚函数的顺序:<ol>
+<li>子类继承父类的所有的虚函数。(公有</li>
+<li>父类的虚函数顺序决定了子类虚函数的顺序。  </li>
+<li>子类重写了父类的某虚函数，则会在子类自己的虚表中覆盖对应位置的函数。  </li>
+<li>子类未重写某虚函数，则直接继承父类的该虚函数。  </li>
+<li>子类自己的虚函会出现在自己虚表中父类所定义的虚函数后面。  </li>
+</ol>
+</li>
+</ul>
+<h2 id="22-虚函数的调用方式"><a href="#22-虚函数的调用方式" class="headerlink" title="22 虚函数的调用方式"></a>22 虚函数的调用方式</h2><p><a href="https://www.bilibili.com/video/BV1n54y1X76T" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>直接调用指根据函数名称，直接调用该函数。(编译器在编译时就确定了<ol>
+<li>普通函数的调用。  </li>
+<li>对象的普通成员函数(相对与虚函数而言)的调用。  </li>
+<li>对象的虚函数的调用。  </li>
+</ol>
+</li>
+<li>间接调用(虚调用，即通过查虚表来调用)指通过查找对象的虚表下表来调用函数的方法。(在运行时期确定调用谁  <ol>
+<li>通过对象的指针调用虚函数。  </li>
+<li>通过对象的引用调用虚函数。  </li>
+</ol>
+</li>
+</ul>
+<h2 id="23-函数覆盖重载隐藏的调用秘笈"><a href="#23-函数覆盖重载隐藏的调用秘笈" class="headerlink" title="23 函数覆盖重载隐藏的调用秘笈"></a>23 函数覆盖重载隐藏的调用秘笈</h2><p><a href="https://www.bilibili.com/video/BV1sA411t7pq" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV1Fe411W7p5" target="_blank" rel="noopener">链接_视频_2</a>  </p>
+<ul>
+<li>讲的太TM细了，高手 !!!  </li>
+<li>调用者的类型决定查找的起点：  <ol>
+<li>在调用者的类中，查找同名函数：<br> 1.1 如果没有，则往上一层查找，如果均找不到，则报错。(未定义<br> 1.2 如果有，则不会往上面查找，可见的域就是当前找到的同名函数所在的域。(函数隐藏  </li>
+<li>在当前可见的域中，找到最佳函数。(函数重载规则<br> 2.1 如果唯一的最佳函数不是虚函数，则该调用是直接调用。<br> 2.2 如果唯一的最佳函数虚函数，判断调用者是否是指针或引用:<br> 2.2.1 调用者是指针或引用，则是间接调用。(函数覆盖规则<br> 2.2.2 调用者不是指针或引用，则是直接调用。  </li>
+</ol>
+</li>
+<li>直接调用: 谁的类型调谁。  </li>
+<li>间接调用: 谁的虚表调谁。  </li>
+</ul>
+<h2 id="24"><a href="#24" class="headerlink" title="24"></a>24</h2>]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>设计模式_工厂模式</title>
     <url>/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<h2 id="0-参考链接"><a href="#0-参考链接" class="headerlink" title="0 参考链接"></a>0 参考链接</h2><p><a href="https://www.bilibili.com/video/BV1e54y1X7bE?from=search&seid=16085648626900326892" target="_blank" rel="noopener">链接_视频</a><br><a href="https://www.runoob.com/design-pattern/factory-pattern.html" target="_blank" rel="noopener">链接_文档</a>  </p>
