@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    C++_基础知识点 |  Hang
+    C++_基础知识点_1 |  Hang
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,7 +32,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-C++/C++_基础知识点" class="article article-type-post" itemscope
+  <article id="post-C++/C++_基础知识点_1" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -40,7 +40,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  C++_基础知识点
+  C++_基础知识点_1
 </h1>
   
 
@@ -49,7 +49,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/07/05/C++/C++_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="article-date">
+      <a href="/2020/07/05/C++/C++_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9_1/" class="article-date">
   <time datetime="2020-07-05T12:39:51.000Z" itemprop="datePublished">2020-07-05</time>
 </a>
       
@@ -64,7 +64,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2.9k字</span>
+            <span class="post-count">4.4k字</span>
         </span>
     </span>
 
@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">10分钟</span>
+            <span class="post-count">15分钟</span>
         </span>
     </span>
 </div>
@@ -415,7 +415,122 @@
 <li>直接调用: 谁的类型调谁。  </li>
 <li>间接调用: 谁的虚表调谁。  </li>
 </ul>
-<h2 id="24"><a href="#24" class="headerlink" title="24"></a>24</h2>
+<h2 id="24-常成员函数"><a href="#24-常成员函数" class="headerlink" title="24 常成员函数"></a>24 常成员函数</h2><p><a href="https://www.bilibili.com/video/BV1ET4y1378r" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>用法: 在成员函数后增加<code>const</code>关键字修饰。<code>int GetNum() const;</code>  </li>
+<li>作用: 无法修改数据成员，一般用来修饰<code>Get</code>函数。  </li>
+<li>本质: 成员函数被<code>const</code>修饰后，<code>this</code>指针的类型由<code>T* const</code>变为<code>const T* const</code>，其中<code>T* const</code>表示该指针本身不能被修改，<code>const T* const</code>表示该指针本身和指针指向的内容均不能被修改。  </li>
+<li>意义: 让编译器提醒开发者该函数不能修改类的成员变量，用于<code>const</code>对象(引用或指针)。  </li>
+<li><code>mutable</code>关键字能够突破这种限制。<code>mutable int m_num;</code>  </li>
+</ul>
+<h2 id="25-常成员变量及初始化列表"><a href="#25-常成员变量及初始化列表" class="headerlink" title="25 常成员变量及初始化列表"></a>25 常成员变量及初始化列表</h2><p><a href="https://www.bilibili.com/video/BV1RQ4y1N7yQ" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>初始化列表可以用于初始化普通成员变量和常成员变量。  </li>
+<li>初始化列表通常是用来构造有参数额成员对象。  </li>
+</ul>
+<h2 id="26-静态成员变量"><a href="#26-静态成员变量" class="headerlink" title="26 静态成员变量"></a>26 静态成员变量</h2><p><a href="https://www.bilibili.com/video/BV1hV411d7JB" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>使用关键字<code>static</code>修饰。  </li>
+<li>要单独的把实现写在类外。(.cpp  </li>
+<li>默认会用<code>0</code>对该成员进行初始化。  </li>
+<li>静态成员变量是同一个类的不同对象共用的。  </li>
+<li>本质: 带类域的全局变量。  </li>
+</ul>
+<h2 id="27-静态成员函数"><a href="#27-静态成员函数" class="headerlink" title="27 静态成员函数"></a>27 静态成员函数</h2><p><a href="https://www.bilibili.com/video/BV1EZ4y1p7q5" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>在头文件(.h)的函数名前面加上关键字<code>static</code>。  </li>
+<li>静态成员函数内部仅能够访问静态的成员变量。  </li>
+<li>本质: 静态成员函数中没有<code>this</code>指针；静态成员函数实际上就是带类域的全局函数。  </li>
+<li>使用<code>static</code>修饰的成员变量或成员函数，与类的对象是无关的，可通过<code>类名::静态成员变量</code>或<code>类名::静态成员函数</code>直接访问。  </li>
+</ul>
+<h2 id="28-单例模式"><a href="#28-单例模式" class="headerlink" title="28 单例模式"></a>28 单例模式</h2><p><a href="https://www.bilibili.com/video/BV1Gz4y1d7RJ" target="_blank" rel="noopener">链接_视频</a><br><a href="https://liuhang0727.github.io/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener">链接_blog</a>  </p>
+<h2 id="29-友元的实现及作用"><a href="#29-友元的实现及作用" class="headerlink" title="29 友元的实现及作用"></a>29 友元的实现及作用</h2><p><a href="https://www.bilibili.com/video/BV1AK4y1t76J" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>使用关键<code>friend</code>修饰。  </li>
+<li>作用: 可以访问一个类的私有成员。  </li>
+<li>分类: 友元全局函数；友元成员函数；友元类。  </li>
+<li>缺点: 破坏了类的封装和数据的隐藏性。  </li>
+<li>用途: 不推荐使用，在某些方面，如运算符重载和某些软件设计时可酌情使用。  </li>
+</ul>
+<h2 id="30-虚析构函数的作用"><a href="#30-虚析构函数的作用" class="headerlink" title="30 虚析构函数的作用"></a>30 虚析构函数的作用</h2><p><a href="https://www.bilibili.com/video/BV1BA411t7K9" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>当存在继承时，将父类和子类的析构函数均通过<code>virtual</code>关键字定义为虚函数，可避免子类的析构函数未被调用。    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子类赋值给父类是安全的</span></span><br><span class="line"><span class="comment">// 当子类和父类的析构函数不是虚函数时，在delete时子类的析构函数未被调用</span></span><br><span class="line">CParent* p = <span class="keyword">new</span> CChild;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> p;</span><br><span class="line"><span class="comment">// 等价于 &lt;==&gt;</span></span><br><span class="line">p-&gt;~CParent();  <span class="comment">// 间接调用，查子类虚表，子类虚表第0项目--子类的析构</span></span><br><span class="line"><span class="built_in">free</span>(p);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="31-虚函数的多态性"><a href="#31-虚函数的多态性" class="headerlink" title="31 虚函数的多态性"></a>31 虚函数的多态性</h2><p><a href="https://www.bilibili.com/video/BV1pi4y147dZ" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>有点懵逼…  </li>
+<li>普通的成员函数中，调用虚函数具有多态性。(间接调用，看虚表  </li>
+<li>在构造函数中调用虚表，实际上是直接调用，所以没有多态。  </li>
+<li>在构造函数中调用普通成员函数，该成员函数中有虚函数的间接调用，由于进入构造时，会为对象赋值为当前类的虚表，所以没有多态。  </li>
+</ul>
+<h2 id="32-纯虚函数与抽象类"><a href="#32-纯虚函数与抽象类" class="headerlink" title="32 纯虚函数与抽象类"></a>32 纯虚函数与抽象类</h2><p><a href="https://www.bilibili.com/video/BV1XK411W7Ex" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>在虚函数的后面加上<code>= 0</code>，表示该函数不需要实现代码，也代表该类不能实例化。  </li>
+<li>纯虚函数如果没有实现，那么包含该纯虚函数的类是抽象类。  </li>
+<li>抽象类不能实例化。  </li>
+<li>接口类: 只是作为父类，规范子类对外使用的接口。(某些函数，可以是虚函数，不一定包含虚函数  </li>
+<li>抽象类: 一定要包含某一个纯虚函数，并且没有被实现。  </li>
+<li>纯虚析构一定要有实现。  </li>
+</ul>
+<h2 id="33-多重继承"><a href="#33-多重继承" class="headerlink" title="33 多重继承"></a>33 多重继承</h2><p><a href="https://www.bilibili.com/video/BV1bk4y167iT" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>同时具备多个父类的特点。    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CFather1</span> &#123;</span> &#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CFather2</span> &#123;</span> &#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cchild</span> :</span> <span class="keyword">public</span> CFather1, <span class="keyword">public</span> CFather2 &#123; &#125;;</span><br></pre></td></tr></table></figure></li>
+<li>多使用类的组合，少使用多重继承。  </li>
+</ul>
+<h2 id="34-菱形继承与虚继承"><a href="#34-菱形继承与虚继承" class="headerlink" title="34 菱形继承与虚继承"></a>34 菱形继承与虚继承</h2><p><a href="https://www.bilibili.com/video/BV1V5411s744" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>菱形继承导致的<code>爷类</code>(hhhhh)中的数据成员和成员函数是多份的问题，可以通过虚继承来解决。    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CGrandfather</span> &#123;</span> &#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CFather1</span> :</span> <span class="keyword">virtual</span> Public CGrandfather &#123; &#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CFather2</span> :</span> <span class="keyword">virtual</span> Public CGrandfather &#123; &#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CChild</span> :</span> <span class="keyword">public</span> CFather1, <span class="keyword">public</span> CFather2 &#123; &#125;;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="35-运算符重载"><a href="#35-运算符重载" class="headerlink" title="35 运算符重载"></a>35 运算符重载</h2><p><a href="https://www.bilibili.com/video/BV13A411q7bE" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>定义: 重载已有运算符，赋于新的功能。  </li>
+<li>方式: 成员函数重载；友元全局函数重载。  </li>
+<li>特点: 不破坏原有运算符的功能；运算符的优先级不变；使用方式要保持不变。  </li>
+<li>作用: 代码简洁。  </li>
+<li>可以重载的运算符:<br>  <code>+ - * / % ^ &amp; | ~</code><br>  <code>! = &lt; &gt; += -= *= /= %=</code><br>  <code>^= &amp;= |= &lt;&lt; &gt;&gt; &gt;&gt;= &lt;&lt;= == !=</code><br>  <code>&lt;= &gt;= &amp;&amp; || ++ -- [] () -&gt;</code><br>  <code>, new new[] delete delete[]</code>  </li>
+<li>不能重载的运算符:<br>  <code>. :: ?: #</code>  </li>
+<li>运算符的重载本质是函数的调用。(<code>operator=</code>  </li>
+<li><code>new</code>和<code>delete</code>并不是关键字，而是运算符。  </li>
+</ul>
+<h2 id="36-cin与cout的奥秘"><a href="#36-cin与cout的奥秘" class="headerlink" title="36 cin与cout的奥秘"></a>36 <code>cin</code>与<code>cout</code>的奥秘</h2><p><a href="https://www.bilibili.com/video/BV1kC4y1H7G7" target="_blank" rel="noopener">链接_视频_1</a><br><a href="https://www.bilibili.com/video/BV1eC4y1H7uC" target="_blank" rel="noopener">链接_视频_2</a>  </p>
+<ul>
+<li><code>cout</code>是类<code>ostream</code>的对象。  </li>
+<li><code>cin</code>是类<code>istream</code>的对象。  </li>
+<li><code>endl</code>是函数。  </li>
+<li><code>&lt;&lt;</code>是一种运算符重载，重载了字符串，整型，<code>endl</code>等函数的指针。    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="37-转换运算符"><a href="#37-转换运算符" class="headerlink" title="37 转换运算符"></a>37 转换运算符</h2><p><a href="https://www.bilibili.com/video/BV15z411B7W8" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>运算符重载的优先级高于转换运算符号。  </li>
+</ul>
+<h2 id="38-函数模板"><a href="#38-函数模板" class="headerlink" title="38 函数模板"></a>38 函数模板</h2><p><a href="https://www.bilibili.com/video/BV1Ug4y1B78H" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>核心: 把某些类型(<code>int</code>, <code>double</code> … )当作是变量。    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function">T <span class="title">GetMin</span><span class="params">(T a, T b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>函数模板的隐式实例化。(由编译器去猜测函数模板的类型    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GetMin(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">GetMin(<span class="number">1.0f</span>, <span class="number">2.0f</span>);</span><br></pre></td></tr></table></figure></li>
+<li>显示实例化。    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GetMin&lt;<span class="keyword">int</span>&gt;(<span class="number">1</span>, <span class="number">2.0f</span>);</span><br></pre></td></tr></table></figure></li>
+<li>模板的特例化。    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;&gt;</span><br><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">GetMin</span><span class="params">(<span class="keyword">char</span>* a, <span class="keyword">char</span>* b)</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="39-类模板"><a href="#39-类模板" class="headerlink" title="39 类模板"></a>39 类模板</h2><p><a href="https://www.bilibili.com/video/BV1NC4y1p7FB" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>类的声明和实现都要放在<code>.h</code>文件中。  </li>
+</ul>
+<h2 id="40-异常处理"><a href="#40-异常处理" class="headerlink" title="40 异常处理"></a>40 异常处理</h2><p><a href="https://www.bilibili.com/video/BV1iA411q7hx" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>捕捉运行时的错误。    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 认为抛异常</span></span><br><span class="line">    <span class="keyword">throw</span> <span class="string">"Hello World!"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(···) &#123;</span><br><span class="line">    <span class="comment">// ···表示所有类型的异常</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(<span class="built_in">std</span>::<span class="built_in">string</span>)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
       <!-- reward -->
       
@@ -478,7 +593,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/07/05/C++/C++_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/07/05/C++/C++_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9_1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -496,11 +611,11 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/07/12/C++/C++_%E6%96%B0%E7%89%B9%E6%80%A7/" class="article-nav-link">
+      <a href="/2020/07/05/C++/C++_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9_2/" class="article-nav-link">
         <strong class="article-nav-caption"></strong>
         <div class="article-nav-title">
           
-            C++_新特性
+            C++_基础知识点_2
           
         </div>
       </a>
