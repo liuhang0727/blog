@@ -1,6 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>设计模式_课程</title>
+    <url>/2020/08/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E8%AF%BE%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="1-设计模式简介"><a href="#1-设计模式简介" class="headerlink" title="1 设计模式简介"></a><a href="https://www.bilibili.com/video/BV1kW411P7KS?p=1" target="_blank" rel="noopener">1 设计模式简介</a></h2><ul>
+<li>从面向对象谈起：  <ul>
+<li>底层思维：向下，如何把握机器底层，从微观理解对象构造  <blockquote>
+<p>语言构造<br>编译转换<br>内存模型<br>运行时机制  </p>
+</blockquote>
+</li>
+<li>抽象思维：向上，如何将我们的周围世界抽象为程序代码  <blockquote>
+<p>面向对象<br>组件封装<br>设计模式<br>架构模式  </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>如何解决复杂性？  <ul>
+<li>分解。(即分而治之，将大问题分解为多个小问题，将复杂问题分解为多个简单问题  </li>
+<li>抽象。(由于不能掌握全部的复杂对象，我们选择忽视它的非本质细节，而去处理泛化和理想化了的对象模型  </li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<ul>
+<li>设计模式分类：  <ul>
+<li>组件协作 (现代软件专业分工之后的第一个结果是“框架与应用程序的划分”，“组件协作”模式通过<strong>晚期绑定</strong>，实现框架与应用程序之间的松耦合，是二者之间协作时常用的模式)，包括:  <blockquote>
+<p>Template Method<br>Strategy<br>Observer / Event  </p>
+</blockquote>
+</li>
+<li>单一职责  <blockquote>
+<p>Decorator<br>Bridge  </p>
+</blockquote>
+</li>
+<li>创建对象  <blockquote>
+<p>Factory Method<br>Abstract Factory<br>Prototype<br>Builder  </p>
+</blockquote>
+</li>
+<li>对象性能  <blockquote>
+<p>Singleton<br>Flyweight  </p>
+</blockquote>
+</li>
+<li>接口隔离  <blockquote>
+<p>Facade<br>Proxy<br>Mediator<br>Adapter  </p>
+</blockquote>
+</li>
+<li>状态变化  <blockquote>
+<p>Memento<br>State</p>
+</blockquote>
+</li>
+<li>数据结构<blockquote>
+<p>Composite<br>Iterator<br>Chain of Resposibility  </p>
+</blockquote>
+</li>
+<li>行为变化  <blockquote>
+<p>Command<br>Visitor  </p>
+</blockquote>
+</li>
+<li>领域问题  <blockquote>
+<p>Interpreter  </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>重构获得模式(Refactoring to Patterns)。  </li>
+<li>重构关键技法：  <ul>
+<li>静态 –&gt; 动态  </li>
+<li>早绑定 –&gt; 晚绑定  </li>
+<li>继承 –&gt; 组合  </li>
+<li>编译时依赖 –&gt; 运行时依赖  </li>
+<li>紧耦合 –&gt; 松耦合  </li>
+</ul>
+</li>
+</ul>
+<h2 id="2-面向对象设计原则"><a href="#2-面向对象设计原则" class="headerlink" title="2 面向对象设计原则"></a><a href="https://www.bilibili.com/video/BV1kW411P7KS?p=2" target="_blank" rel="noopener">2 面向对象设计原则</a></h2><ul>
+<li>依赖倒置原则(DIP)  <ul>
+<li>高层模块(<strong>稳定</strong>)不应该依赖于低层模块(<strong>变化</strong>)，二者都应该依赖于抽象(<strong>稳定</strong>)。  </li>
+<li>抽象(<strong>稳定</strong>)不应该依赖于实现细节(<strong>变化</strong>)，实现细节应该依赖于抽象(<strong>稳定</strong>)。  </li>
+</ul>
+</li>
+<li>开放封闭原则(OCP)  <ul>
+<li>对扩展开放，对更改封闭。  </li>
+<li>类模块应该是可扩展的，但是不可修改。  </li>
+</ul>
+</li>
+<li>单一职责原则(SRP)  <ul>
+<li>一个类应该仅有一个引起它变化的原因。  </li>
+<li>变化的方向隐含着类的<strong>责任</strong>。  </li>
+</ul>
+</li>
+<li>Liskov替换原则(LSP)  <ul>
+<li>子类必须能够替换他们的基类(IS-A)。  </li>
+<li>继承表达类型抽象。  </li>
+</ul>
+</li>
+<li>接口隔离原则(ISP)  <ul>
+<li>不应该强迫客户程序依赖他们不用的方法。  </li>
+<li>接口应该小而完备。(public/private  </li>
+</ul>
+</li>
+<li>优先使用对象组合，而不是类继承  <ul>
+<li>类继承通常为“白箱复用”，对象组合通常为“黑箱复用”。  </li>
+<li>继承在某种程度上破坏了封装性，子类父类耦合度高。  </li>
+<li>对象组合只要求被组合的对象具有良好定义的接口，耦合度低。  </li>
+</ul>
+</li>
+<li>封装变化点  <ul>
+<li>使用封装来创建对象之间的分界层，让设计者可以在分界层的一侧进行修改，而不会对另一侧产生不良影响，从而实现层次之间的松耦合。  </li>
+</ul>
+</li>
+<li>针对接口编程，而不是针对实现编程  <ul>
+<li>不将变量类型声明为某个特定的具体类，而是声明为某个接口。  </li>
+<li>客户程序无需获知对象的具体类型，只需要知道对象所具有的接口。  </li>
+<li>减少系统中各部分的依赖关系，从而实现“<strong>高内聚、松耦合</strong>”的类型设计方案。  </li>
+</ul>
+</li>
+</ul>
+<h2 id="3-模板方法模式-Template-Method"><a href="#3-模板方法模式-Template-Method" class="headerlink" title="3 模板方法模式(Template Method)"></a><a href="https://www.bilibili.com/video/BV1kW411P7KS?p=3" target="_blank" rel="noopener">3 模板方法模式(Template Method)</a></h2><ul>
+<li>定义：<ul>
+<li>定义一个操作中的算法骨架(<strong>稳定</strong>)，而将一些步骤(<strong>变化</strong>)延迟(<strong>虚函数重写</strong>)到子类中。Template Method使得子类可以不改变(<strong>复用</strong>)一个算法的结构即可重定义(<strong>override</strong>)该算法的某些特定步骤。  </li>
+</ul>
+</li>
+<li>结构：( <em>红色不变，蓝色变化</em><br><img src="../../../../../files/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F.png" alt="模板方法模式" title="模板方法模式">  </li>
+<li>要点：<ul>
+<li>Template Method模式使用最简单的机制(<strong>虚函数的多态性</strong>)，为很多应用程序框架提供了灵活的扩展点，是代码复用方面的基本实现结构。  </li>
+<li>“不要调用我，让我调用你”的反向控制结构是Template Method的典型应用。  </li>
+</ul>
+</li>
+</ul>
+<h2 id="4-策略模式-Strategy"><a href="#4-策略模式-Strategy" class="headerlink" title="4 策略模式(Strategy)"></a>4 策略模式(Strategy)</h2><p><a href="https://www.bilibili.com/video/BV1kW411P7KS?p=4" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>动机：  <ul>
+<li>在软件构建过程中，某些对象使用的算法可能是多种多样经常改变的，如果将这些算法都编码到对象中，将会使对象变的异常复杂，而且有时候支持不适用的算法也是一种性能负担。  </li>
+<li>如何在运行时根据需要透明地更改对象的算法？将算法与对象本身解耦，从而避免上述问题？  </li>
+</ul>
+</li>
+<li>定义：  <ul>
+<li>定义一些列算法，把他们一个个封装起来，并且使他们可互相替换(<strong>变化</strong>)。该模式使得算法可独立于使用它的客户程序(稳定)而变化(扩展，子类化)。  </li>
+</ul>
+</li>
+<li>结构：<br><img src="../../../../../files/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.png" alt="策略模式结构" title="策略模式结构">  </li>
+<li>要点：  <ul>
+<li>Strategy及其子类为组件提供了一系列可重用的算法，从而使得类型在<strong>运行时</strong>方便地根据需要在各个算法之间进行切换。  </li>
+<li>Strategy模式提供了用条件判断语句(<code>if else</code> / <code>switch case</code>)以外的另一种选择，消除条件判断语句，就是在<strong>解耦合</strong>。含有许多条件判断语句的代码通常都需要Strategy模式。  </li>
+<li>如果Strategy对象没有实例变量，那么各个上下文可共享同一个Strategy对象，从而节省对象开销。  </li>
+</ul>
+</li>
+</ul>
+<h2 id="5-观察者模式-Observer-Event"><a href="#5-观察者模式-Observer-Event" class="headerlink" title="5 观察者模式(Observer / Event)"></a><a href="https://www.bilibili.com/video/BV1kW411P7KS?p=5" target="_blank" rel="noopener">5 观察者模式(Observer / Event)</a></h2><ul>
+<li>动机：  <ul>
+<li>在软件构建过程中，我们需要为某些对象建立一种“通知依赖关系”，一个对象(目标对象)的状态发生变化，所有的依赖对象(观察者对象)都将得到通知。如果这样的依赖关系过于紧密，将使软件不能很好地抵御变化。  </li>
+<li>使用面向对象技术，可以将这种依赖关系弱化，并形成一种稳定的依赖关系，从而实现软件体系结构的松耦合。  </li>
+</ul>
+</li>
+<li>定义：  <ul>
+<li>定义对象间的一种<strong>一对多</strong>(变化)的依赖关系，以便当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并更新。  </li>
+</ul>
+</li>
+<li>结构：  <ul>
+<li><img src="../../../../../files/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.png" alt="观察者模式结构" title="观察者模式结构">  </li>
+</ul>
+</li>
+<li>要点：  <ul>
+<li>使用面向对象的抽象，Observer模式使得我们可以<strong>独立地</strong>改变目标与观察者，从而使二者之间的依赖关系达到松耦合。  </li>
+<li>目标发送通知时，无需指定观察者，通知(可以携带通知信息作为参数)会自动传播。  </li>
+<li>观察者自己决定是否需要订阅通知，目标对象对此一无所知。  </li>
+<li>Observer模式是基于事件的UI跨国家中非常常用的设计模式，也是MVC模式的重要组成部分。  </li>
+</ul>
+</li>
+</ul>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++_多线程</title>
     <url>/2020/07/12/C++/C++_%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
     <content><![CDATA[]]></content>
@@ -16,6 +194,72 @@
     <title>C++_新特性</title>
     <url>/2020/07/12/C++/C++_%E6%96%B0%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<a id="more"></a>  
+
+
+<h2 id="01-nullptr与constexptr"><a href="#01-nullptr与constexptr" class="headerlink" title="01 nullptr与constexptr"></a>01 <code>nullptr</code>与<code>constexptr</code></h2><p><a href="https://www.bilibili.com/video/BV1pk4y1z7JT" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>nullptr</code>表示空指针，本质还是<code>0</code>,但具备了类型。  </li>
+<li>建议程序中使用<code>nullptr</code>代替<code>NULL</code>。  </li>
+<li><code>constexptr</code>常量表示式关键字，用于修饰函数。  </li>
+</ul>
+<h2 id="02-迭代器与类型推导auto"><a href="#02-迭代器与类型推导auto" class="headerlink" title="02 迭代器与类型推导auto"></a>02 迭代器与类型推导<code>auto</code></h2><p><a href="https://www.bilibili.com/video/BV1Hi4y1G74C" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>stl</code>中存在一些常用的封装好的数据结构相关的模板类(容器)，例如<code>vector(动态数据)</code>，<code>list(链表)</code>，<code>stack(栈)</code>，<code>queue(队列)</code>，<code>map(hash表/红黑树)</code>等。  </li>
+<li>这些类通常都具有一些最基本的操作，例如增加，删除，修改，遍历等。  </li>
+<li><code>C++</code>为了方便统一，采用了设计模式中的<code>迭代器模式</code>，统一的提供了一种方法顺序访问一个聚合对象中的各种元素，而又不暴露该对象的内部表示。  <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;  <span class="comment">// 迭代器，模板类中的内部类</span></span><br><span class="line"><span class="keyword">for</span>(it = v.<span class="built_in">begin</span>(); it != v.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;  <span class="comment">// *it来访问模板类的具体值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>auto</code>类型推导关键字，简洁代码。  <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it : v) &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>auto</code>不能用于函数传参。  </li>
+</ul>
+<h2 id="03-委托构造与继承构造"><a href="#03-委托构造与继承构造" class="headerlink" title="03 委托构造与继承构造"></a>03 委托构造与继承构造</h2><p><a href="https://www.bilibili.com/video/BV1dt4y1X7eB" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>委托构造指在类中的一个构造函数中调用另一个构造函数，从而达到简化代码的目的。  <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> i1, i2;</span><br><span class="line">    Base() &#123;</span><br><span class="line">        v1 = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Base(<span class="keyword">int</span> v) : Base() &#123;  <span class="comment">// 委托Base()构造函数</span></span><br><span class="line">        v2 = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>利用<code>using</code>关键字引入继承构造概念，实现在子类中完成父类构造函数的调用。  <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> i1, i2;</span><br><span class="line">    Base() &#123;</span><br><span class="line">        v1 = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Base(<span class="keyword">int</span> v) : Base() &#123;  <span class="comment">// 委托Base()构造函数</span></span><br><span class="line">        v2 = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubClass</span> :</span> <span class="keyword">public</span> Base &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 直接使用父类的构造函数</span></span><br><span class="line">    <span class="keyword">using</span> Base::Base;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="04-override，final，default和delete关键字"><a href="#04-override，final，default和delete关键字" class="headerlink" title="04 override，final，default和delete关键字"></a>04 <code>override</code>，<code>final</code>，<code>default</code>和<code>delete</code>关键字</h2><p><a href="https://www.bilibili.com/video/BV1xk4y1z7zh" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>override</code>关键字显示地告知编译器进行虚函数的重载，编译器将检查基函数是否存在这样的虚函数，否则将无法通过编译。  </li>
+<li><code>final</code>关键字修饰类或函数，表示该类不能在被继承，或该函数不能再被重载。  </li>
+<li><code>default</code>关键字希望编译器产生默认构造函数。  </li>
+<li><code>delete</code>关键字不让编译器产生默认构造函数。  </li>
+</ul>
+<h2 id="05-强制转换const-cast"><a href="#05-强制转换const-cast" class="headerlink" title="05 强制转换const_cast"></a>05 强制转换<code>const_cast</code></h2><p><a href="https://www.bilibili.com/video/BV1jV41167VK" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>强制类型转换<code>(type)vari</code>使存在风险的，如把<code>整型</code>数值转换为<code>指针</code>，把<code>基类指针</code>转换为<code>派生类指针</code>，把<code>一种函数指针</code>转换成<code>另一种函数指针</code>，把<code>常量指针</code>转换成<code>非常量</code>指针。  </li>
+<li><code>c++</code>引入四种功能不同的强制类型转换运算符：<code>const_cast</code>，<code>static_cast</code>，<code>reinterpret_cast</code>和<code>dynamic_cast</code>。  </li>
+<li>克服了<code>c</code>语言强制类型转换的三个缺点：<br>  1 没有从形式上体现转换功能和风险的不同。<br>  2 将多态基类指针转换成派生类指针时不检查安全性，即无法判断转换后的指针是否确实指向一个派生类对象。<br>  3 难以在程序中找到到底哪个地方进行了强制类型转换。  </li>
+<li><code>const_cast</code>仅用于去除<code>const</code>属性的转换，它也是四种强制类型转换运算符中唯一能够去除<code>const</code>属性的运算符。  </li>
+<li>常量对象或者是基本数据类型不允许转化为非常量对象，只能通过指针，引用或<code>this</code>指针修改。  </li>
+</ul>
+<h2 id="06-强制转换static-cast"><a href="#06-强制转换static-cast" class="headerlink" title="06 强制转换static_cast"></a>06 强制转换<code>static_cast</code></h2><p><a href="https://www.bilibili.com/video/BV1iK411n7os" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>基本等价于隐式转换的一种类型转换运算符，可使用于需要明确隐式转换的地方。  </li>
+<li>可用于低风险的转换：<br>  1 整型和浮点型<br>  2 字符与整型<br>  3 转换运算符<br>  4 空指针(<code>void* p = nullptr</code>)转换为任何目标类型的指针  </li>
+<li>不可用于风险高的转换：<br>  1 不同类型的指针间转换<br>  2 整型和指针之间的转换<br>  3 不同类型的引用之间转换  </li>
+</ul>
+<h2 id="07-强制转换dynamic-cast"><a href="#07-强制转换dynamic-cast" class="headerlink" title="07 强制转换dynamic_cast"></a>07 强制转换<code>dynamic_cast</code></h2><p><a href="https://www.bilibili.com/video/BV1FZ4y1p78h" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>用于具有<strong>虚函数的基类</strong>与<strong>派生类</strong>之间的<strong>指针或引用</strong>的转换。  </li>
+<li>基类必须具备虚函数。(why，<code>dynamic_cast</code>是<strong>运行时类型检查</strong>，需要运行时类型信息(RTTI)，而这个信息是存储与类的<strong>虚函数表</strong>关系紧密，只有一个类定义了虚函数，才会有虚函数表。  </li>
+<li>运行时检查，转型不成功则返回一个空指针。  </li>
+<li>非必要不要使用<code>dynamic_cast</code>，有<strong>额外的函数开销</strong>。  </li>
+<li>常见的转换方式：<br>  1 基类指针或引用转派生类指针。(<strong>必须使用</strong><code>dynamic_cast</code><br>  2 派生类指针或引用转基类指针。(可以使用<code>dynamic_cast</code>，但更<strong>推荐使用</strong><code>static_cast</code>  </li>
+<li>父类转子类(向下转换)是<strong>不安全</strong>的，子类转父类(向上转换)是<strong>安全</strong>的。  </li>
+</ul>
+<h2 id="08-强制转换reinterpret-cast"><a href="#08-强制转换reinterpret-cast" class="headerlink" title="08 强制转换reinterpret_cast"></a>08 强制转换<code>reinterpret_cast</code></h2><p><a href="https://www.bilibili.com/video/BV1zz4y1X7Ka" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>用于进行各种<strong>高危险</strong>不同类型的转换：<br>  1 不同类型指针之间。<br>  2 不同类型引用之间。<br>  3 指针和能容纳指针的整数类型之间。  </li>
+<li>编译器处理，执行是逐字节复制的操作。  </li>
+<li>类似于<strong>显示强转</strong>，<strong>后果自负</strong>。  </li>
+</ul>
+<h2 id="09-lambda表达式与匿名函数"><a href="#09-lambda表达式与匿名函数" class="headerlink" title="09 lambda表达式与匿名函数"></a>09 <code>lambda</code>表达式与匿名函数</h2><p><a href="https://www.bilibili.com/video/BV1CC4y187Km" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>lamba</code>表达式就是匿名函数。  </li>
+</ul>
+<h2 id="27-线程与同步"><a href="#27-线程与同步" class="headerlink" title="27 线程与同步"></a>27 线程与同步</h2><p><a href="https://space.bilibili.com/477729104/video" target="_blank" rel="noopener">链接_视频</a>  </p>
+<p>* </p>
 ]]></content>
       <categories>
         <category>Coding</category>

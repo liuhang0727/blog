@@ -66,6 +66,95 @@
     
     
     
+    <article id="post-设计模式/设计模式_课程" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/08/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E8%AF%BE%E7%A8%8B/"
+    >设计模式_课程</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/08/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E8%AF%BE%E7%A8%8B/" class="article-date">
+  <time datetime="2020-08-09T09:30:23.000Z" itemprop="datePublished">2020-08-09</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Coding/">Coding</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h2 id="1-设计模式简介"><a href="#1-设计模式简介" class="headerlink" title="1 设计模式简介"></a><a href="https://www.bilibili.com/video/BV1kW411P7KS?p=1" target="_blank" rel="noopener">1 设计模式简介</a></h2><ul>
+<li>从面向对象谈起：  <ul>
+<li>底层思维：向下，如何把握机器底层，从微观理解对象构造  <blockquote>
+<p>语言构造<br>编译转换<br>内存模型<br>运行时机制  </p>
+</blockquote>
+</li>
+<li>抽象思维：向上，如何将我们的周围世界抽象为程序代码  <blockquote>
+<p>面向对象<br>组件封装<br>设计模式<br>架构模式  </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>如何解决复杂性？  <ul>
+<li>分解。(即分而治之，将大问题分解为多个小问题，将复杂问题分解为多个简单问题  </li>
+<li>抽象。(由于不能掌握全部的复杂对象，我们选择忽视它的非本质细节，而去处理泛化和理想化了的对象模型  </li>
+</ul>
+</li>
+</ul>
+      
+      <a class="article-more-link" href="/2020/08/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E8%AF%BE%E7%A8%8B/">more ...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
     <article id="post-C++/C++_多线程" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -178,6 +267,72 @@
 
       
       <a id="more"></a>  
+
+
+<h2 id="01-nullptr与constexptr"><a href="#01-nullptr与constexptr" class="headerlink" title="01 nullptr与constexptr"></a>01 <code>nullptr</code>与<code>constexptr</code></h2><p><a href="https://www.bilibili.com/video/BV1pk4y1z7JT" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>nullptr</code>表示空指针，本质还是<code>0</code>,但具备了类型。  </li>
+<li>建议程序中使用<code>nullptr</code>代替<code>NULL</code>。  </li>
+<li><code>constexptr</code>常量表示式关键字，用于修饰函数。  </li>
+</ul>
+<h2 id="02-迭代器与类型推导auto"><a href="#02-迭代器与类型推导auto" class="headerlink" title="02 迭代器与类型推导auto"></a>02 迭代器与类型推导<code>auto</code></h2><p><a href="https://www.bilibili.com/video/BV1Hi4y1G74C" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>stl</code>中存在一些常用的封装好的数据结构相关的模板类(容器)，例如<code>vector(动态数据)</code>，<code>list(链表)</code>，<code>stack(栈)</code>，<code>queue(队列)</code>，<code>map(hash表/红黑树)</code>等。  </li>
+<li>这些类通常都具有一些最基本的操作，例如增加，删除，修改，遍历等。  </li>
+<li><code>C++</code>为了方便统一，采用了设计模式中的<code>迭代器模式</code>，统一的提供了一种方法顺序访问一个聚合对象中的各种元素，而又不暴露该对象的内部表示。  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;  <span class="comment">// 迭代器，模板类中的内部类</span></span><br><span class="line"><span class="keyword">for</span>(it = v.<span class="built_in">begin</span>(); it != v.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;  <span class="comment">// *it来访问模板类的具体值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>auto</code>类型推导关键字，简洁代码。  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it : v) &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>auto</code>不能用于函数传参。  </li>
+</ul>
+<h2 id="03-委托构造与继承构造"><a href="#03-委托构造与继承构造" class="headerlink" title="03 委托构造与继承构造"></a>03 委托构造与继承构造</h2><p><a href="https://www.bilibili.com/video/BV1dt4y1X7eB" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>委托构造指在类中的一个构造函数中调用另一个构造函数，从而达到简化代码的目的。  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> i1, i2;</span><br><span class="line">    Base() &#123;</span><br><span class="line">        v1 = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Base(<span class="keyword">int</span> v) : Base() &#123;  <span class="comment">// 委托Base()构造函数</span></span><br><span class="line">        v2 = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>利用<code>using</code>关键字引入继承构造概念，实现在子类中完成父类构造函数的调用。  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> i1, i2;</span><br><span class="line">    Base() &#123;</span><br><span class="line">        v1 = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Base(<span class="keyword">int</span> v) : Base() &#123;  <span class="comment">// 委托Base()构造函数</span></span><br><span class="line">        v2 = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubClass</span> :</span> <span class="keyword">public</span> Base &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 直接使用父类的构造函数</span></span><br><span class="line">    <span class="keyword">using</span> Base::Base;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="04-override，final，default和delete关键字"><a href="#04-override，final，default和delete关键字" class="headerlink" title="04 override，final，default和delete关键字"></a>04 <code>override</code>，<code>final</code>，<code>default</code>和<code>delete</code>关键字</h2><p><a href="https://www.bilibili.com/video/BV1xk4y1z7zh" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>override</code>关键字显示地告知编译器进行虚函数的重载，编译器将检查基函数是否存在这样的虚函数，否则将无法通过编译。  </li>
+<li><code>final</code>关键字修饰类或函数，表示该类不能在被继承，或该函数不能再被重载。  </li>
+<li><code>default</code>关键字希望编译器产生默认构造函数。  </li>
+<li><code>delete</code>关键字不让编译器产生默认构造函数。  </li>
+</ul>
+<h2 id="05-强制转换const-cast"><a href="#05-强制转换const-cast" class="headerlink" title="05 强制转换const_cast"></a>05 强制转换<code>const_cast</code></h2><p><a href="https://www.bilibili.com/video/BV1jV41167VK" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>强制类型转换<code>(type)vari</code>使存在风险的，如把<code>整型</code>数值转换为<code>指针</code>，把<code>基类指针</code>转换为<code>派生类指针</code>，把<code>一种函数指针</code>转换成<code>另一种函数指针</code>，把<code>常量指针</code>转换成<code>非常量</code>指针。  </li>
+<li><code>c++</code>引入四种功能不同的强制类型转换运算符：<code>const_cast</code>，<code>static_cast</code>，<code>reinterpret_cast</code>和<code>dynamic_cast</code>。  </li>
+<li>克服了<code>c</code>语言强制类型转换的三个缺点：<br>  1 没有从形式上体现转换功能和风险的不同。<br>  2 将多态基类指针转换成派生类指针时不检查安全性，即无法判断转换后的指针是否确实指向一个派生类对象。<br>  3 难以在程序中找到到底哪个地方进行了强制类型转换。  </li>
+<li><code>const_cast</code>仅用于去除<code>const</code>属性的转换，它也是四种强制类型转换运算符中唯一能够去除<code>const</code>属性的运算符。  </li>
+<li>常量对象或者是基本数据类型不允许转化为非常量对象，只能通过指针，引用或<code>this</code>指针修改。  </li>
+</ul>
+<h2 id="06-强制转换static-cast"><a href="#06-强制转换static-cast" class="headerlink" title="06 强制转换static_cast"></a>06 强制转换<code>static_cast</code></h2><p><a href="https://www.bilibili.com/video/BV1iK411n7os" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>基本等价于隐式转换的一种类型转换运算符，可使用于需要明确隐式转换的地方。  </li>
+<li>可用于低风险的转换：<br>  1 整型和浮点型<br>  2 字符与整型<br>  3 转换运算符<br>  4 空指针(<code>void* p = nullptr</code>)转换为任何目标类型的指针  </li>
+<li>不可用于风险高的转换：<br>  1 不同类型的指针间转换<br>  2 整型和指针之间的转换<br>  3 不同类型的引用之间转换  </li>
+</ul>
+<h2 id="07-强制转换dynamic-cast"><a href="#07-强制转换dynamic-cast" class="headerlink" title="07 强制转换dynamic_cast"></a>07 强制转换<code>dynamic_cast</code></h2><p><a href="https://www.bilibili.com/video/BV1FZ4y1p78h" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>用于具有<strong>虚函数的基类</strong>与<strong>派生类</strong>之间的<strong>指针或引用</strong>的转换。  </li>
+<li>基类必须具备虚函数。(why，<code>dynamic_cast</code>是<strong>运行时类型检查</strong>，需要运行时类型信息(RTTI)，而这个信息是存储与类的<strong>虚函数表</strong>关系紧密，只有一个类定义了虚函数，才会有虚函数表。  </li>
+<li>运行时检查，转型不成功则返回一个空指针。  </li>
+<li>非必要不要使用<code>dynamic_cast</code>，有<strong>额外的函数开销</strong>。  </li>
+<li>常见的转换方式：<br>  1 基类指针或引用转派生类指针。(<strong>必须使用</strong><code>dynamic_cast</code><br>  2 派生类指针或引用转基类指针。(可以使用<code>dynamic_cast</code>，但更<strong>推荐使用</strong><code>static_cast</code>  </li>
+<li>父类转子类(向下转换)是<strong>不安全</strong>的，子类转父类(向上转换)是<strong>安全</strong>的。  </li>
+</ul>
+<h2 id="08-强制转换reinterpret-cast"><a href="#08-强制转换reinterpret-cast" class="headerlink" title="08 强制转换reinterpret_cast"></a>08 强制转换<code>reinterpret_cast</code></h2><p><a href="https://www.bilibili.com/video/BV1zz4y1X7Ka" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li>用于进行各种<strong>高危险</strong>不同类型的转换：<br>  1 不同类型指针之间。<br>  2 不同类型引用之间。<br>  3 指针和能容纳指针的整数类型之间。  </li>
+<li>编译器处理，执行是逐字节复制的操作。  </li>
+<li>类似于<strong>显示强转</strong>，<strong>后果自负</strong>。  </li>
+</ul>
+<h2 id="09-lambda表达式与匿名函数"><a href="#09-lambda表达式与匿名函数" class="headerlink" title="09 lambda表达式与匿名函数"></a>09 <code>lambda</code>表达式与匿名函数</h2><p><a href="https://www.bilibili.com/video/BV1CC4y187Km" target="_blank" rel="noopener">链接_视频</a>  </p>
+<ul>
+<li><code>lamba</code>表达式就是匿名函数。  </li>
+</ul>
+<h2 id="27-线程与同步"><a href="#27-线程与同步" class="headerlink" title="27 线程与同步"></a>27 线程与同步</h2><p><a href="https://space.bilibili.com/477729104/video" target="_blank" rel="noopener">链接_视频</a>  </p>
+<p>* </p>
 
       
       <!-- reward -->
@@ -711,74 +866,6 @@
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
 
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-daily_work/daily_work" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/05/07/daily_work/daily_work/"
-    >Daily Work</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/05/07/daily_work/daily_work/" class="article-date">
-  <time datetime="2020-05-07T14:55:00.000Z" itemprop="datePublished">2020-05-07</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <blockquote>
-<p>工作学习生活记录  </p>
-</blockquote>
-      
-      <a class="article-more-link" href="/2020/05/07/daily_work/daily_work/">more ...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
 
     </footer>
 

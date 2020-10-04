@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-19T09:31:55.425Z</updated>
+  <updated>2020-08-09T10:38:54.892Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式_课程</title>
+    <link href="http://yoursite.com/2020/08/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E8%AF%BE%E7%A8%8B/"/>
+    <id>http://yoursite.com/2020/08/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_%E8%AF%BE%E7%A8%8B/</id>
+    <published>2020-08-09T09:30:23.000Z</published>
+    <updated>2020-08-09T10:38:54.892Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-设计模式简介&quot;&gt;&lt;a href=&quot;#1-设计模式简介&quot; class=&quot;headerlink&quot; title=&quot;1 设计模式简介&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1kW411P7KS?p=1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;1 设计模式简介&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从面向对象谈起：  &lt;ul&gt;
+&lt;li&gt;底层思维：向下，如何把握机器底层，从微观理解对象构造  &lt;blockquote&gt;
+&lt;p&gt;语言构造&lt;br&gt;编译转换&lt;br&gt;内存模型&lt;br&gt;运行时机制  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;抽象思维：向上，如何将我们的周围世界抽象为程序代码  &lt;blockquote&gt;
+&lt;p&gt;面向对象&lt;br&gt;组件封装&lt;br&gt;设计模式&lt;br&gt;架构模式  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如何解决复杂性？  &lt;ul&gt;
+&lt;li&gt;分解。(即分而治之，将大问题分解为多个小问题，将复杂问题分解为多个简单问题  &lt;/li&gt;
+&lt;li&gt;抽象。(由于不能掌握全部的复杂对象，我们选择忽视它的非本质细节，而去处理泛化和理想化了的对象模型  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>C++_多线程</title>
@@ -42,7 +82,7 @@
     <link href="http://yoursite.com/2020/07/12/C++/C++_%E6%96%B0%E7%89%B9%E6%80%A7/"/>
     <id>http://yoursite.com/2020/07/12/C++/C++_%E6%96%B0%E7%89%B9%E6%80%A7/</id>
     <published>2020-07-12T13:33:03.000Z</published>
-    <updated>2020-07-19T10:14:58.745Z</updated>
+    <updated>2020-09-06T07:41:59.548Z</updated>
     
     <summary type="html">
     
@@ -50,7 +90,10 @@
       
         
         
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt; 
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;  
+
+
+&lt;h2 id=&quot;01-nullptr与constexptr&quot;&gt;&lt;a href=&quot;#01-nullptr与constexptr&quot; class=&quot;headerlink&quot; title=&quot;01
         
       
     
@@ -149,7 +192,7 @@
     <link href="http://yoursite.com/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>http://yoursite.com/2020/07/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-07-05T05:11:34.000Z</published>
-    <updated>2020-07-05T13:28:32.780Z</updated>
+    <updated>2020-08-09T09:32:24.293Z</updated>
     
     <summary type="html">
     
