@@ -1146,6 +1146,16 @@
       </tags>
   </entry>
   <entry>
+    <title>Album</title>
+    <url>/album/index.html</url>
+    <content><![CDATA[<blockquote>
+<p>可以拿去吹13的照骗 – Photoed by Hang  </p>
+</blockquote>
+<p><img src="../../../../../files/Album/%E5%A4%96%E6%BB%A9.jpg" alt="外滩" title="外滩">  </p>
+<p><img src="../../../../../files/Album/%E9%99%86%E5%AE%B6%E5%98%B4.jpg" alt="陆家嘴" title="陆家嘴">  </p>
+]]></content>
+  </entry>
+  <entry>
     <title>About Me</title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote>
@@ -1163,24 +1173,14 @@
 ]]></content>
   </entry>
   <entry>
-    <title>archives</title>
-    <url>/archives/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>categories</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Album</title>
-    <url>/album/index.html</url>
-    <content><![CDATA[<blockquote>
-<p>可以拿去吹13的照骗 – Photoed by Hang  </p>
-</blockquote>
-<p><img src="../../../../../files/Album/%E5%A4%96%E6%BB%A9.jpg" alt="外滩" title="外滩">  </p>
-<p><img src="../../../../../files/Album/%E9%99%86%E5%AE%B6%E5%98%B4.jpg" alt="陆家嘴" title="陆家嘴">  </p>
-]]></content>
+    <title>archives</title>
+    <url>/archives/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>tags</title>
