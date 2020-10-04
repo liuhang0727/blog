@@ -99,10 +99,7 @@
       
 
       
-      <a id="more"></a>  
-
-
-<h2 id="01-nullptr与constexptr"><a href="#01-nullptr与constexptr" class="headerlink" title="01 nullptr与constexptr"></a>01 <code>nullptr</code>与<code>constexptr</code></h2><p><a href="https://www.bilibili.com/video/BV1pk4y1z7JT" target="_blank" rel="noopener">链接_视频</a>  </p>
+      <h2 id="01-nullptr与constexptr"><a href="#01-nullptr与constexptr" class="headerlink" title="01 nullptr与constexptr"></a>01 <code>nullptr</code>与<code>constexptr</code></h2><p><a href="https://www.bilibili.com/video/BV1pk4y1z7JT" target="_blank" rel="noopener">链接_视频</a>  </p>
 <ul>
 <li><code>nullptr</code>表示空指针，本质还是<code>0</code>,但具备了类型。  </li>
 <li>建议程序中使用<code>nullptr</code>代替<code>NULL</code>。  </li>
@@ -116,6 +113,8 @@
 <li><code>auto</code>类型推导关键字，简洁代码。  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it : v) &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><code>auto</code>不能用于函数传参。  </li>
 </ul>
+<a id="more"></a>  
+
 <h2 id="03-委托构造与继承构造"><a href="#03-委托构造与继承构造" class="headerlink" title="03 委托构造与继承构造"></a>03 委托构造与继承构造</h2><p><a href="https://www.bilibili.com/video/BV1dt4y1X7eB" target="_blank" rel="noopener">链接_视频</a>  </p>
 <ul>
 <li>委托构造指在类中的一个构造函数中调用另一个构造函数，从而达到简化代码的目的。  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> i1, i2;</span><br><span class="line">    Base() &#123;</span><br><span class="line">        v1 = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Base(<span class="keyword">int</span> v) : Base() &#123;  <span class="comment">// 委托Base()构造函数</span></span><br><span class="line">        v2 = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>

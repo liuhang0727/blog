@@ -82,20 +82,24 @@
     <link href="http://yoursite.com/2020/07/12/C++/C++_%E6%96%B0%E7%89%B9%E6%80%A7/"/>
     <id>http://yoursite.com/2020/07/12/C++/C++_%E6%96%B0%E7%89%B9%E6%80%A7/</id>
     <published>2020-07-12T13:33:03.000Z</published>
-    <updated>2020-09-06T07:41:59.548Z</updated>
+    <updated>2020-10-04T14:38:23.656Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;  
-
-
-&lt;h2 id=&quot;01-nullptr与constexptr&quot;&gt;&lt;a href=&quot;#01-nullptr与constexptr&quot; class=&quot;headerlink&quot; title=&quot;01
-        
-      
+      &lt;h2 id=&quot;01-nullptr与constexptr&quot;&gt;&lt;a href=&quot;#01-nullptr与constexptr&quot; class=&quot;headerlink&quot; title=&quot;01 nullptr与constexptr&quot;&gt;&lt;/a&gt;01 &lt;code&gt;nullptr&lt;/code&gt;与&lt;code&gt;constexptr&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1pk4y1z7JT&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;链接_视频&lt;/a&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nullptr&lt;/code&gt;表示空指针，本质还是&lt;code&gt;0&lt;/code&gt;,但具备了类型。  &lt;/li&gt;
+&lt;li&gt;建议程序中使用&lt;code&gt;nullptr&lt;/code&gt;代替&lt;code&gt;NULL&lt;/code&gt;。  &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;constexptr&lt;/code&gt;常量表示式关键字，用于修饰函数。  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;02-迭代器与类型推导auto&quot;&gt;&lt;a href=&quot;#02-迭代器与类型推导auto&quot; class=&quot;headerlink&quot; title=&quot;02 迭代器与类型推导auto&quot;&gt;&lt;/a&gt;02 迭代器与类型推导&lt;code&gt;auto&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1Hi4y1G74C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;链接_视频&lt;/a&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stl&lt;/code&gt;中存在一些常用的封装好的数据结构相关的模板类(容器)，例如&lt;code&gt;vector(动态数据)&lt;/code&gt;，&lt;code&gt;list(链表)&lt;/code&gt;，&lt;code&gt;stack(栈)&lt;/code&gt;，&lt;code&gt;queue(队列)&lt;/code&gt;，&lt;code&gt;map(hash表/红黑树)&lt;/code&gt;等。  &lt;/li&gt;
+&lt;li&gt;这些类通常都具有一些最基本的操作，例如增加，删除，修改，遍历等。  &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C++&lt;/code&gt;为了方便统一，采用了设计模式中的&lt;code&gt;迭代器模式&lt;/code&gt;，统一的提供了一种方法顺序访问一个聚合对象中的各种元素，而又不暴露该对象的内部表示。  &lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; v;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;::iterator it;  &lt;span class=&quot;comment&quot;&gt;// 迭代器，模板类中的内部类&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(it = v.&lt;span class=&quot;built_in&quot;&gt;begin&lt;/span&gt;(); it != v.&lt;span class=&quot;built_in&quot;&gt;end&lt;/span&gt;(); it++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; *it &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;  &lt;span class=&quot;comment&quot;&gt;// *it来访问模板类的具体值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;auto&lt;/code&gt;类型推导关键字，简洁代码。  &lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; v;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;auto&lt;/span&gt; it : v) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; *it &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;auto&lt;/code&gt;不能用于函数传参。  &lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
