@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-09T10:38:54.892Z</updated>
+  <updated>2020-10-05T08:31:46.359Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随笔_20201005</title>
+    <link href="http://yoursite.com/2020/10/05/%E9%9A%8F%E7%AC%94/essay_20201005/"/>
+    <id>http://yoursite.com/2020/10/05/%E9%9A%8F%E7%AC%94/essay_20201005/</id>
+    <published>2020-10-05T08:24:47.000Z</published>
+    <updated>2020-10-05T08:31:46.359Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;每个优秀的人，都有一段沉默的时光。那段时光，是付出了很多努力却得不到结果的日子，我们把它叫做&lt;strong&gt;扎根&lt;/strong&gt;   – Chairman Xi 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式_课程</title>
@@ -443,7 +471,7 @@
     <link href="http://yoursite.com/2020/02/16/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200216/"/>
     <id>http://yoursite.com/2020/02/16/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E7%AC%94_20200216/</id>
     <published>2020-02-16T07:09:48.000Z</published>
-    <updated>2020-07-05T03:08:44.467Z</updated>
+    <updated>2020-10-05T08:24:18.201Z</updated>
     
     <summary type="html">
     
