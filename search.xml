@@ -346,6 +346,10 @@
 <p>油画处女作  </p>
 </blockquote>
 <p><img src="../../../../../files/album/%E6%B2%B9%E7%94%BB_0.jpg" alt="油画_0">  </p>
+<h1 id="证件照"><a href="#证件照" class="headerlink" title="证件照"></a>证件照</h1><blockquote>
+<p>太帅了!!!  </p>
+</blockquote>
+<p><img src="../../../../../files/album/%E8%AF%81%E4%BB%B6%E7%85%A7_0.jpg" alt="证件照_0">  </p>
 <h1 id="实验Demo"><a href="#实验Demo" class="headerlink" title="实验Demo"></a>实验Demo</h1><blockquote>
 <p>记录一下插入视频的语法  </p>
 </blockquote>
@@ -1514,17 +1518,12 @@
       </tags>
   </entry>
   <entry>
-    <title>archives</title>
-    <url>/archives/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>About Me</title>
-    <url>/about/index.html</url>
+    <url>/2020/02/11/about/about/</url>
     <content><![CDATA[<blockquote>
-<p>SLAM初级玩家、DL调参侠、自动驾驶幻想师、二流程序员、摄影爱好者</p>
+<p>SLAM初级玩家、DL调参侠、自动驾驶幻想师、二流程序员、摄影爱好者  </p>
 </blockquote>
-<h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p>姓名: 刘行<br>家乡: 河南漯河<br>现居: 上海杨浦  </p>
+<h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p>姓名: 刘行<br>家乡: 河南漯河<br>现居: 上海徐汇  </p>
 <h3 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h3><p>2013.09-2017.06　河南理工大学　测绘工程　学士学位<br>2017.09-2020.06　　同济大学　　测绘工程　硕士学位  </p>
 <a id="more"></a>  
 
@@ -1532,8 +1531,13 @@
 <h3 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h3><p>2020.04-今　SenseTime　自动驾驶　自动驾驶系统开发  </p>
 <h3 id="论文专利"><a href="#论文专利" class="headerlink" title="论文专利"></a>论文专利</h3><p>[1] <a href="https://www.mdpi.com/2072-4292/11/11/1348" target="_blank" rel="noopener">Liu, H.; Ye, Q.; Wang, H.R.; Chen, L.; Yang, J. A Precise and Robust Segmentation-based Lidar<br>Localization System for Automated Urban Driving. Remote Sensing. 2019, 11, 1348. (SCI，Q1)</a><br>[2] 刘行, 王海瑞, 陈亮. 一种适于交叉路段的道路边沿提取方法及装置. 2019. (已受理)</p>
 <h3 id="社交账号"><a href="#社交账号" class="headerlink" title="社交账号"></a>社交账号</h3><p>GitHub: <a href="https://github.com/liuhang0727" target="_blank" rel="noopener">liuhang0727</a><br>E-Mail: <a href="mailto:liuhang@tongji.edu.cn">liuhang@tongji.edu.cn</a><br>CSDN: <a href="https://blog.csdn.net/liudahanghang" target="_blank" rel="noopener">liu_hang_07_27</a><br>知乎: <a href="https://www.zhihu.com/people/liu-xing-52-47-87" target="_blank" rel="noopener">刘行</a><br>豆瓣: <a href="https://www.douban.com/people/185232228/" target="_blank" rel="noopener">刘行</a><br>微博: <a href="https://weibo.com/1819383450/profile?topnav=1&wvr=6" target="_blank" rel="noopener">刘大航航</a><br>微信: <a href="https://wx.qq.com/" target="_blank" rel="noopener">HXXH727</a>  </p>
-<p><a href="../files/About/resume_liuhang_20190918.pdf">Resume</a></p>
+<p><a href="../../../../../files/about/resume_liuhang_20200908.pdf">Resume</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>archives</title>
+    <url>/archives/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>categories</title>
